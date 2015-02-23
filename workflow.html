@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0">
-<title>#DeployDB</title>
+<title>#DeployDB WorkFlow</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -502,264 +502,287 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-<h1>#DeployDB</h1>
+<h1>#DeployDB WorkFlow</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_important_links">Important Links</a></li>
-<li><a href="#_the_problem">The Problem</a></li>
-<li><a href="#_the_solution">The Solution</a></li>
-<li><a href="#_terminology">Terminology</a></li>
-<li><a href="#_goals_requirements">Goals/Requirements</a></li>
-<li><a href="#_use_cases_questions">Use-cases/questions</a></li>
-<li><a href="#_an_awful_diagram">An awful diagram</a></li>
+<li><a href="#_trigger_artifact_create">Trigger: Artifact create:</a></li>
+<li><a href="#_trigger_deployment_started">Trigger: Deployment started:</a></li>
+<li><a href="#_trigger_deployment_completed">Trigger: Deployment completed:</a></li>
+<li><a href="#_trigger_promotion_completed">Trigger: Promotion completed:</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<a class="image" href="https://gitter.im/lookout/deploydb"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join%20Chat"></a>
-</div>
-</div>
-<div class="paragraph">
-<p><span class="image"><a class="image" href="https://travis-ci.org/lookout/deploydb"><img src="https://travis-ci.org/lookout/deploydb.svg?branch=master" alt="Build Status"></a></span></p>
-</div>
-<div class="paragraph">
-<p><strong>Who, what, where and when.</strong></p>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_important_links">Important Links</h2>
-<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/lookout/deploydb">Source code</a></p>
+<p>Artifacts - A1, A2</p>
 </li>
 <li>
-<p><a href="https://github.com/lookout/deploydb/issues">Issue Tracker</a></p>
+<p>Deployments - D1, D2, D3</p>
 </li>
 <li>
-<p><a href="internals.html">DeployDB Internals</a></p>
+<p>Flow - F1</p>
 </li>
 <li>
-<p><a href="hacking.html">Hacking on DeployDB</a></p>
+<p>Enviroments - E1, E2, E3</p>
 </li>
 <li>
-<p><a href="restapi/index.html">REST API documentation</a></p>
+<p>Pipelines - PL2 = (E1, E2, E3)</p>
 </li>
 <li>
-<p><a href="groovydoc/index.html">Groovydocs</a></p>
+<p>Promotions - P1, P2</p>
 </li>
 <li>
-<p><a href="workflow.html">DeployDB WorkFlow</a></p>
+<p>PromotionResults = PR1, PR2</p>
+</li>
+<li>
+<p>Services - S1 = A1, A2), PL1, (P1, P2</p>
 </li>
 </ul>
 </div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_the_problem">The Problem</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As a service-oriented infrastructure grows, testing and managing/driving
-deployments with the oft used  "all together now" approach becomes untenable.</p>
-</div>
-<div class="paragraph">
-<p>Tracking versions of application and configuration management code through a
-consistent pipeline of tiered environments where verification of those changes
-can occur is difficult.</p>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_solution">The Solution</h2>
+<h2 id="_trigger_artifact_create">Trigger: Artifact create:</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>DeployDB is a tool to provide a single source of truth for artifact-based
-deployments through multiple environments. It is intended to fit within an
-existing infrastructure where CI and deployment orchestration are already
-provided by other tools (e.g. Jenkins, Rundeck).</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create Artifact (A1')</p>
+</li>
+<li>
+<p>Find Service (S1) affected by this Artifact for the given artifact (group-name:artifact-name)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If multiple services are affected (S1 &amp; S2), then repeat the following steps (i.e. create multiple Flows - F1, F2)</p>
+</li>
+</ol>
 </div>
-<div class="paragraph">
-<p>As a user of DeployDB, you should be able to understand exactly:</p>
+</li>
+<li>
+<p>For each Environment (E1, E2, E3) in the Pipeline (PL1) in Service (S1)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create deployments with State=not-started [D1, D2, D3]</p>
+</li>
+<li>
+<p>Deployment (D1) contains (E1, Promotions [P1, P2]), etc</p>
+</li>
+</ol>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>where a particular version of code has been deployed</p>
 </li>
 <li>
-<p>when that artifact was deployed and why</p>
+<p>Create Flow (F1)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Store Artifact (A1’), Service (S1), Deployments [D1, D2, D3]</p>
 </li>
 <li>
-<p>what the verification status is of the artifact</p>
+<p>ArtifactId and ServiceId would be unique for the flow (key)</p>
 </li>
-</ul>
+<li>
+<p>Set Flow State=inProgress</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Get next Deployment D1 from the list (w/ state=notStarted)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>For each webhook for Deployment-created:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>For each action in the webhook create HookRequest (HR)</p>
+</li>
+<li>
+<p>Payload for all deployment HookRequests: A1', D1, S1, E1</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_terminology">Terminology</h2>
+<h2 id="_trigger_deployment_started">Trigger: Deployment started:</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p><strong>Artifact</strong>: a singular versioned file which represents an
-iteration of code to be deployed.</p>
+<p>Lookup Deployment (D1) from the Id received in the trigger</p>
 </li>
 <li>
-<p><strong>Deployment</strong>: taking an artifact, or artifacts, and
-delivering and executing them inside of an environment.</p>
+<p>Update State=started</p>
 </li>
 <li>
-<p><strong>Environment</strong>: a collection of applications and configurations for executing
-services together across a cluster of machines.</p>
+<p>For each webhook for Deployment-started</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>For each action in the webhook create HookRequest (HR)</p>
 </li>
 <li>
-<p><strong>Pipeline</strong>: a set of deployments and promotions defining the relationships
-between each environment</p>
+<p>Payload for all deployment HookRequests: A1', D1, S1, E1</p>
 </li>
-<li>
-<p><strong>Promotion</strong>: a set of criteria for determining whether a deployment is
-suitable to progress to the next environment in the pipeline</p>
+</ol>
+</div>
 </li>
-<li>
-<p><strong>Service</strong>: a collection of artifacts representing a conceptual service
-provided to customers (e.g. "the authentication service" which might consist
-of the "auth.war", "puppet-mysql", "puppet-jetty" artifacts)</p>
-</li>
-</ul>
+</ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_goals_requirements">Goals/Requirements</h2>
+<h2 id="_trigger_deployment_completed">Trigger: Deployment completed:</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Provide a single source of truth for:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>which artifacts have been deployed to which environments</p>
+<p>Lookup Deployment (D1) from the Id received in the trigger</p>
 </li>
 <li>
-<p>the success of a deployment, between the act of deployment and the
-follow-on validation of the artifacts deployed</p>
+<p>Update deployment (D1) State=completed</p>
 </li>
-</ul>
+<li>
+<p>For each webhook for Deployment-completed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>For each action in the webhook create HookRequest (HR)</p>
+</li>
+<li>
+<p>Payload for all deployment HookRequests: A1', D1, S1, E1</p>
+</li>
+</ol>
 </div>
 </li>
-<li>
-<p>Provide a centralized synchronization point for coordinating deployments
-across environments as defined by a pipeline.</p>
-</li>
-<li>
-<p><strong>Not</strong> provide redundant functionality already provided by orchestration
-tools such as Rundeck or Jenkins.</p>
-</li>
-<li>
-<p>Integrate with existing orchestration tools to drive deployments to
-a particular environment</p>
-</li>
-<li>
-<p>Integration points for external tools for:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>providing verification data around a specific deployment (e.g.
-"Deployment X was verified by Jenkins job &lt;jobname~ build =5")</p>
-</li>
-<li>
-<p>providing deployment start/finish information for environments</p>
-</li>
-<li>
-<p>providing read access to deployment, artifact and environment information
-contained with DeployDB</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Integration points should be exposed via a command line, Ops-friendly,
-interface</p>
-</li>
-<li>
-<p>Configuration should not live in the data store and be easily driven by
-configuration management tools (e.g. Chef, Puppet)</p>
-</li>
-</ul>
+</ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_use_cases_questions">Use-cases/questions</h2>
+<h2 id="_trigger_promotion_completed">Trigger: Promotion completed:</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>How do we set up a new application/service in DeployDB?</p>
+<p>Lookup Deployment (D1) from the Id received in the trigger</p>
 </li>
 <li>
-<p>How does promotion of one application through an environment work so that
-the entire environment doesn&#8217;t have to be promoted together</p>
+<p>Lookup Promotion (P1) from the Id received in the trigger</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If P1 resultStatus=failed in the PromotionResults in the trigger</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Update Depolyment (D1) with Promotion-state=failed</p>
 </li>
 <li>
-<p>Deployment failures should have one of three outcomes:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Deploy the last known good Deployment to the environment</p>
+<p>From Service (S1) find failureStrategy (STOP to begin with)</p>
 </li>
 <li>
-<p>Hit these webhooks (e.g. pagerduty)</p>
+<p>Update Deployment State=failed</p>
 </li>
 <li>
-<p>Do nothing/record and ignore it</p>
+<p>Update Flow State=failed</p>
 </li>
-</ul>
+</ol>
 </div>
 </li>
-</ul>
+<li>
+<p>If resultStatus=passed in the PromotionResults in the trigger</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Update Depolyment (D1) with Promotion&#8217;s (P1) State=success
+.For each webhook for Promotion-completed:</p>
+</li>
+</ol>
 </div>
+</li>
+<li>
+<p>For each action in the webhook create HookRequest (HR)</p>
+</li>
+<li>
+<p>Payload for all promotion hookRequests: A1', D1, S1, PR1</p>
+</li>
+</ol>
 </div>
+</li>
+<li>
+<p>If all promotions (i.e. P1 &amp; P2) for this deployment (D1) are completed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Update Deployment State=success</p>
+</li>
+<li>
+<p>Get next deployment (D2) from the list (w/ state=notStarted)</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>For each webhook for Deployment-created:</p>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>For each action in the webhook create HookRequest (HR)</p>
+</li>
+<li>
+<p>Payload for all deployment HookRequests: A1, D1, S1, E1</p>
+</li>
+</ol>
 </div>
-<div class="sect1">
-<h2 id="_an_awful_diagram">An awful diagram</h2>
-<div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>                                    2) publish
-                        +----------+   artifact +----------+
-      +---------------&gt; | TravisCI +------------+  Bintray |
-      |                 +----+-----+            +-----+----+
-      |                      |                        |
-      | 1) webhook           |                        |    3) webhook
-      |  (run tests)         |                        | (artifact available)
-      |                      |                        |
-      |                      |                        |
-+-----+----+                 |                 +------+------+                +----------+
-|  GitHub  |                 +---------------&gt; |  #DeployDB  +--------------&gt; |  Heroku  |
-+----------+                                   +-------------+                +----------+
-               5) report deploy/verification                4) webhook
-                   success                                 (deploy artifact
-                                                            to environment)</pre>
+</li>
+</ol>
 </div>
+</li>
+<li>
+<p>If no deployments in the list with State=notStarted,</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Update Flow State=Success</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-02-20 13:50:19 EST
+Last updated 2015-02-20 13:54:27 EST
 </div>
 </div>
 </body>
