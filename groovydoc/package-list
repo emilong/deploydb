@@ -1,6 +1,11 @@
+db.migration
 deploydb
 deploydb.dao
 deploydb.health
 deploydb.mappers
 deploydb.models
+deploydb.models.Pipeline
+deploydb.models.Webhook
+deploydb.provider
+deploydb.registry
 deploydb.resources
