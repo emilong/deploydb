@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0">
-<title>#DeployDB Internals</title>
+<title>#DeployDB Web UI Design</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -502,29 +502,12 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-<h1>#DeployDB Internals</h1>
+<h1>#DeployDB Web UI Design</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_web_hooks">Web hooks</a></li>
-<li><a href="#_events">Events</a>
-<ul class="sectlevel2">
-<li><a href="#_notifications">Notifications</a></li>
-<li><a href="#_triggers">Triggers</a></li>
-<li><a href="#_configuring_webhooks">Configuring Webhooks</a></li>
-</ul>
-</li>
-<li><a href="#_queueing">Queueing</a></li>
-<li><a href="#_data_storage">Data storage</a></li>
-<li><a href="#_environments_pipelines_promotions">Environments/Pipelines/Promotions</a>
-<ul class="sectlevel2">
-<li><a href="#_environments">Environments</a></li>
-<li><a href="#_pipelines">Pipelines</a></li>
-<li><a href="#_services">Services</a></li>
-<li><a href="#_promotions">Promotions</a></li>
-<li><a href="#_flow_diagram">Flow Diagram</a></li>
-</ul>
-</li>
+<li><a href="#_developer_view">Developer View</a></li>
+<li><a href="#_manager_view">Manager View</a></li>
 </ul>
 </div>
 </div>
@@ -532,398 +515,100 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document outlines some of the design internals of DeployDB as an
-application. This does not include the interactions with other services (e.g. CI,
-deployment orchestration) but rather the interactions between different
-components within the conceptual "DeployDB box."</p>
+<p>Below is a rough outline of what a few of the key DeployDB web-based views
+should entail.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_web_hooks"><a class="anchor" href="#_web_hooks"></a>Web hooks</h2>
+<h2 id="_developer_view"><a class="anchor" href="#_developer_view"></a>Developer View</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>"Web hooks" in this section technically covers "web hooks" but also public APIs
-that other services like Jenkins might use to trigger changes in the DeployDB
-system.</p>
+<p><strong>Goal:</strong> Provide quick feedback to the status of a particularly versioned
+Artifact as it progress through its deployment pipeline</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_events"><a class="anchor" href="#_events"></a>Events</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_notifications"><a class="anchor" href="#_notifications"></a>Notifications</h3>
-<div class="paragraph">
-<p><strong>Outgoing</strong> events, e.g. webhooks, which should be invoked every time the
-internal DeployDB state machine changes.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Deployment created, in a non-started status (with Deployment, Artifact, Service, Environment)</p>
-</li>
-<li>
-<p>Deployment started, e.g. a deployer service has begun to <strong>actually</strong> deploy (with Deployment, Artifact, Service, Environment)</p>
-</li>
-<li>
-<p>Deployment completed (with Deployment, Artifact, Service, Environment)</p>
-</li>
-<li>
-<p>Promotion completed (with Deployment, Promotion status)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_triggers"><a class="anchor" href="#_triggers"></a>Triggers</h3>
-<div class="paragraph">
-<p>Inbound events, there&#8217;s a large symmetry between <a href="#_notifications">Notifications</a> and
-Triggers. These would be coming from external sources, such as Jenkins, which
-push or change the internal DeployDB state machine.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Artifact of a new version is available</p>
-</li>
-<li>
-<p>Started Deployment</p>
-</li>
-<li>
-<p>Completed Deployment</p>
-</li>
-<li>
-<p>Report Promotion status</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_configuring_webhooks"><a class="anchor" href="#_configuring_webhooks"></a>Configuring Webhooks</h3>
-<div class="paragraph">
-<p>Webhooks can be configured at two levels, globally and per-environment. The
-reason for this distinction is to make it easier to drive behaviors in
-different environments through different deployer/orchestration servers (e.g.
-Rundeck-Integ, Rundeck-Prod).</p>
-</div>
-<div class="listingblock">
-<div class="title">webhooks.yml</div>
+<div class="imageblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">deployment</span>:
-    - <span class="string"><span class="content">started:</span></span>
-    - <span class="string"><span class="content">created:</span><span class="content">
-        - http://jenkins.example.com/job/notify-deploy-created/build</span></span>
-    - <span class="string"><span class="content">completed:</span><span class="content">
-        - http://jenkins.example.com/job/notify-deploy-completed/build</span></span>
-<span class="key">promotion</span>:
-    - <span class="string"><span class="content">completed:</span></span></code></pre>
+<img src="images/webui-20150325-devview.png" alt="Developer View">
 </div>
 </div>
 <div class="paragraph">
-<p>See <a href="#_environments">Environments</a> for environment specific webhook configuration</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_queueing"><a class="anchor" href="#_queueing"></a>Queueing</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Queueing is largely required to ensure the delivery of <a href="#_notifications">Notifications</a> and
-other out-bound web hooks.</p>
+<p>In this view the user should be presented with a horizontal layout of the
+different Environments that the requested Artifact must progress through.</p>
 </div>
 <div class="paragraph">
-<p>The queueing interface from the application should be abstracted enough to
-allow queueing to be backed by different queue providers, e.g.:</p>
+<p>Referencing the above mockup, the Artifact (<code>verspaetung-0.2.1+0c3d.jar</code>) is in
+the current state:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Redis (e.g. <a href="https://aws.amazon.com/elasticache/">ElastiCache</a>)</p>
+<p>It has been deployed to the "ephemeral-alpha" Environment</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Promotions: "healthchecks", "readonly-smoke-tests" and
+"mutable-smoke-tests" have passed.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>Kafka</p>
+<p>It has been deployed to the "integration" Environment</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Promotions: "healthchecks" and "readonly-smoke-tests" have passed</p>
 </li>
 <li>
-<p>etc</p>
+<p>The Promotions: "mutable-smoke-tests" have failed</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The Artifact has not <em>yet</em> been deployed to the "production" Environment</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_data_storage"><a class="anchor" href="#_data_storage"></a>Data storage</h2>
+<h2 id="_manager_view"><a class="anchor" href="#_manager_view"></a>Manager View</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The data storage layer is what is responsible for persisting runtime
-information into a database. This should be abstracted through a JDBC connector.</p>
+<p><strong>Goal:</strong> Provide an overview of which Services, composed of which Artifacts, are
+deployed into the available Environments</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_environments_pipelines_promotions"><a class="anchor" href="#_environments_pipelines_promotions"></a>Environments/Pipelines/Promotions</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Current thinking: if pipelines are defined in "configuration" as are
-"environments" then the actual registration of an artifact probably shouldn&#8217;t
-be in configuration but rather registered via an API.</p>
-</div>
-<div class="paragraph">
-<p>It might make sense to have that registration API write some YAML to disk or
-something and allow DeployDB to register artifacts from the same place on disk</p>
-</div>
-<div class="sect2">
-<h3 id="_environments"><a class="anchor" href="#_environments"></a>Environments</h3>
-<div class="listingblock">
-<div class="title">environments/integ.yml</div>
+<div class="imageblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">name</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">DeployDB Primary Integration</span><span class="delimiter">&quot;</span></span>
-<span class="key">webhooks</span>:
-  <span class="key">deployment</span>:
-    - <span class="string"><span class="content">started:</span></span>
-    - <span class="string"><span class="content">created:</span><span class="content">
-        - http://jenkins.example.com/job/integ-deploy-created/build</span></span>
-    - <span class="string"><span class="content">completed:</span><span class="content">
-        - http://jenkins.example.com/job/integ-deploy-completed/build</span></span>
-  <span class="key">promotion</span>:
-    - <span class="string"><span class="content">completed:</span></span></code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_pipelines"><a class="anchor" href="#_pipelines"></a>Pipelines</h3>
-<div class="listingblock">
-<div class="title">pipelines/devtoprod.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">environments</span>:
-  - <span class="string"><span class="content">dev-alpha</span></span>
-  - <span class="string"><span class="content">dev-beta</span></span>
-  - <span class="string"><span class="content">integ</span></span>
-  - <span class="string"><span class="content">preprod:</span></span>
-    <span class="key">promotions</span>:
-        - <span class="string"><span class="content">prod-preflight</span></span>
-        - <span class="string"><span class="content">manual</span></span>
-  - <span class="string"><span class="content">prod</span></span></code></pre>
+<img src="images/webui-20150324-managerview.png" alt="Manager View">
 </div>
 </div>
 <div class="paragraph">
-<p>The Pipeline concept allows for the configuring of a linear set of Environments
-for Artifacts to be passed through. At each step of the way the Promotions
-defined for a given Service traversing the pipeline will need to be
-validated. E.g. the "FoaS" Service much execute its Promotions between
-<code>integ</code> and <code>preprod</code>, but before going from <code>preprod</code> to <code>prod</code> the
-<code>prod-preflight</code> and a <code>manual</code> Promotion must be satisfied.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_services"><a class="anchor" href="#_services"></a>Services</h3>
-<div class="listingblock">
-<div class="title">services/foas.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">name</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Fun as a Service</span><span class="delimiter">&quot;</span></span>
-<span class="key">artifacts</span>:
-  - <span class="string"><span class="content">com.github.lookout:foas</span></span>
-  - <span class="string"><span class="content">com.github.lookout.puppet:puppet-foas</span></span>
-  - <span class="string"><span class="content">com.github.lookout:puppet-mysql</span></span>
-<span class="key">pipelines</span>:
-  - <span class="string"><span class="content">devtoprod</span></span>
-<span class="key">promotions</span>:
-  - <span class="string"><span class="content">status-check</span></span>
-  - <span class="string"><span class="content">jenkins-smoke</span></span>
-<span class="key">failure_strategy</span>: <span class="string"><span class="content">stop</span></span></code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The "artifact" declarations in the configuration file are using the
-<code>groupname:artifactname</code> syntax which ensure that we can uniquely identify an
-krtifact. It is expected that all artifacts have at least a unique
-<code>groupname:artifactname</code> for storage in the data store.
-</td>
-</tr>
-</table>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Service Configuration Properties</caption>
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
-<th class="tableblock halign-left valign-top">Type/Options</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The descriptive name of the service being defined</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">artifacts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A list of <code>groupname:artifactname</code> pairings defining artifacts which compose the service</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of Strings</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">pipelines</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Named pipeline to push these Artifacts through (<em>One pipeline per service is currently supported</em>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of valid pipeline identifier Strings</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">promotions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Named promotions to execute after a Deployment of any of the Artifacts
-completes, in every stage of pipeline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of valid promotion identifier Strings</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">failure_strategy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">What should happen with an artifact that is part of this service when a
-Deployment fails, or the Promotions indicate that the Artifact isn&#8217;t valid.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">One of "stop" (stop pipeline), "rollback" (revert to latest version
-successfully deployed to this environment) or "full_rollback" (revert to latest
-version to successfully complete pipeline)</p></td>
-</tr>
-</tbody>
-</table>
-<div class="sect3">
-<h4 id="_service_defaults"><a class="anchor" href="#_service_defaults"></a>Service Defaults</h4>
-<div class="paragraph">
-<p>DeployDB should support a special file called <code>_defaults.yml</code> which can contain
-default Artifacts which can be considered part of every Service.  This might
-include a <code>puppet-users</code> module, <code>logstash-agent</code> or other globally applicable
-Artifacts which should trigger Deployments for the given Services..</p>
-</div>
-<div class="listingblock">
-<div class="title">services/_defaults.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">artifacts</span>:
-  - <span class="string"><span class="content">com.github.lookout:puppet-users</span></span>
-  - <span class="string"><span class="content">com.github.lookout:puppet-datadog</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_promotions"><a class="anchor" href="#_promotions"></a>Promotions</h3>
-<div class="listingblock">
-<div class="title">promotions/jenkins-smoke.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">JenkinsPromotion</span></span>
-<span class="key">jobs</span>:
-  - <span class="string"><span class="content">basic-smokes-test</span></span>
-  - <span class="string"><span class="content">basic-perf-test</span></span>
-  - <span class="string"><span class="content">end2end-smoke-test</span></span></code></pre>
-</div>
+<p>In the above mockup, there are three Environments that are available with
+various Services contained within them. Inside of each of those Services there
+are multiple Artifacts that make them up.</p>
 </div>
 <div class="paragraph">
-<p><code>JenkinsPromotion</code> as a typed concept would require a list of Jenkins job names
-that would be required to succeed in order to execute the promotion.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The "promotion" concepts described below are not final and really just
-brainstorming to flesh out how configuration of promotions as a concept <strong>might</strong>
-work.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">promotions/status-check.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">WebhookPromotion</span></span>
-<span class="key">url</span>: <span class="string"><span class="content">/healhcheck</span></span>
-<span class="key">status</span>: <span class="string"><span class="content">200</span></span>
-<span class="key">timeout</span>: <span class="string"><span class="content">15</span></span></code></pre>
-</div>
+<p>This view is giving a manager, QA or non-technical user an overview of which
+versions of which Artifacts can be found in which Environments. In this case
+the "Verspätung" service has a <em>newer</em> version of the
+<code>com.github.lookout:verspaetung</code> Artifact in "ephemeral-alpha" than the
+"integration", and "integration" has a newer version than "production."</p>
 </div>
 <div class="paragraph">
-<p><code>WebhookPromotion</code> would be something that would make a HTTP GET request to the
-application and see if it&#8217;s online before identifying it as "promoted." How
-this might work with a cluster of applications in one service, I&#8217;m not yet sure.</p>
-</div>
-<div class="paragraph">
-<p>`A <strong>manual</strong> promotion is a special case scenario where the UI for DeployDB is
-going to need to present a button to a user to click</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_flow_diagram"><a class="anchor" href="#_flow_diagram"></a>Flow Diagram</h3>
-<div class="literalblock">
-<div class="content">
-<pre>initiator        deployDb            deployer1        deployer2       tester
-   +                 +                   +               +               +
-   |   A1' created   |                   |               |               |
-   +-----------------&gt;                   |               |               |
-   | create artifact | D1=ns, A1',S1,E1  |               |               |
-   |                 +-------------------&gt;               |               |
-   |                 | Deployment Start  |               |               |
-   |                 |                   |               |               |
-   |                 |    D1=started     |               |               |
-   |                 &lt;-------------------+               |               |
-   |                 | Deployment Startd |               |               |
-   |                 |                   |               |               |
-   |                 |    D1=compltd     |               |               |
-   |                 &lt;-------------------+               |               |
-   |                 | Deployment Compltd|               |               |
-   |                 |                   +               +               |
-   |                 |   D1, A1',S1,S1  (Deployment Completed)           |
-   |                 +-------------------+---------------+---------------&gt;
-   |                 |                   |               |               |
-   |                 |   D1, P1-PASSED   |               |               |
-   |                 &lt;---------+-----------------------------------------+
-   |                 |                   |               |               |
-   |                 | D2=ns, A1',S1,E2  |               |               |
-   |                 +-----------------------------------&gt;               |
-   |                 | Deployment Start  |               |               |
-   |                 |                   |               |               |
-   |                 |    D2=started     |               |               |
-   |                 &lt;-----------------------------------+               |
-   |                 | Deployment Startd |               |               |
-   |                 |                   |               |               |
-   |                 |    D2=compltd     |               |               |
-   |                 &lt;-----------------------------------+               |
-   |                 | Deployment Compltd|               |               |
-   |                 |                   +               +               |
-   |                 |   D2, A1',S1,E2  (Deployment Completed)           |
-   |                 +-------------------+---------------+---------------&gt;
-   |                 |                   |               |               |
-   |                 |   D2, P1-PASSED   |               |               |
-   |                 &lt;---------+-----------------------------------------+
-   |                 |                   |               |               |
-   +                 +                   +               +               +</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Legend:
-Service S1 = Artifacts (A1, A2),Pipline (PL1), Promotions (P1)
-Pipline PL1 = Enviroment (E1), Enviroment (E2)
-ns = notStarted</pre>
-</div>
-</div>
+<p>The `cookbooks:deploydb-cookbook`Artifact in the "ephemeral-alpha" Environment
+is also of a newer version than "integration" and its Promotions have failed,
+resulting in the Artifact&#8217;s progression through the Environments (left to
+right) to stop.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-02-17 15:37:46 PST
+Last updated 2015-03-25 13:46:52 PDT
 </div>
 </div>
 </body>

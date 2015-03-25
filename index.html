@@ -506,7 +506,11 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_important_links">Important Links</a></li>
+<li><a href="#_important_links">Important Links</a>
+<ul class="sectlevel2">
+<li><a href="#_internals_hacking">Internals/Hacking</a></li>
+</ul>
+</li>
 <li><a href="#_the_problem">The Problem</a></li>
 <li><a href="#_the_solution">The Solution</a></li>
 <li><a href="#_terminology">Terminology</a></li>
@@ -534,7 +538,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_important_links">Important Links</h2>
+<h2 id="_important_links"><a class="anchor" href="#_important_links"></a>Important Links</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -545,10 +549,16 @@ table.CodeRay td.code>pre{padding:0}
 <p><a href="https://github.com/lookout/deploydb/issues">Issue Tracker</a></p>
 </li>
 <li>
-<p><a href="internals.html">DeployDB Internals</a></p>
+<p><a href="https://bintray.com/lookout/systems/DeployDB/_latestVersion">Latest released version</a></p>
 </li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_internals_hacking"><a class="anchor" href="#_internals_hacking"></a>Internals/Hacking</h3>
+<div class="ulist">
+<ul>
 <li>
-<p><a href="hacking.html">Hacking on DeployDB</a></p>
+<p><a href="hacking.html">Hacking DeployDB</a></p>
 </li>
 <li>
 <p><a href="restapi/index.html">REST API documentation</a></p>
@@ -557,15 +567,22 @@ table.CodeRay td.code>pre{padding:0}
 <p><a href="groovydoc/index.html">Groovydocs</a></p>
 </li>
 <li>
-<p><a href="workflow.html">DeployDB WorkFlow</a></p>
+<p><a href="internals.html">Data model/Internals</a></p>
+</li>
+<li>
+<p><a href="workflow.html">Workflow</a></p>
+</li>
+<li>
+<p><a href="webui.html">Web UI Design/concepts</a></p>
 </li>
 </ul>
 </div>
 <hr>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_the_problem">The Problem</h2>
+<h2 id="_the_problem"><a class="anchor" href="#_the_problem"></a>The Problem</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>As a service-oriented infrastructure grows, testing and managing/driving
@@ -579,7 +596,7 @@ can occur is difficult.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_solution">The Solution</h2>
+<h2 id="_the_solution"><a class="anchor" href="#_the_solution"></a>The Solution</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>DeployDB is a tool to provide a single source of truth for artifact-based
@@ -606,7 +623,7 @@ provided by other tools (e.g. Jenkins, Rundeck).</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_terminology">Terminology</h2>
+<h2 id="_terminology"><a class="anchor" href="#_terminology"></a>Terminology</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -640,7 +657,7 @@ of the "auth.war", "puppet-mysql", "puppet-jetty" artifacts)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_goals_requirements">Goals/Requirements</h2>
+<h2 id="_goals_requirements"><a class="anchor" href="#_goals_requirements"></a>Goals/Requirements</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -701,7 +718,7 @@ configuration management tools (e.g. Chef, Puppet)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_use_cases_questions">Use-cases/questions</h2>
+<h2 id="_use_cases_questions"><a class="anchor" href="#_use_cases_questions"></a>Use-cases/questions</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -733,7 +750,7 @@ the entire environment doesn&#8217;t have to be promoted together</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_an_awful_diagram">An awful diagram</h2>
+<h2 id="_an_awful_diagram"><a class="anchor" href="#_an_awful_diagram"></a>An awful diagram</h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
@@ -759,7 +776,7 @@ the entire environment doesn&#8217;t have to be promoted together</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-02-20 11:26:52 PST
+Last updated 2015-03-25 13:05:29 PDT
 </div>
 </div>
 </body>
