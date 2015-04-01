@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0">
-<title>Artifact</title>
+<title>#DeployDB Configuration</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -502,50 +502,300 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-<h1>Artifact</h1>
+<h1>#DeployDB Configuration</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_properties">Properties</a>
-<ul class="sectlevel2">
-<li><a href="#_internal_identifier">Internal identifier</a></li>
-<li><a href="#_group">Group</a></li>
-<li><a href="#_name">Name</a></li>
-</ul>
-</li>
+<li><a href="#_configuration_details">Configuration Details:</a></li>
+<li><a href="#_reloading_models_configuration">Reloading Models-Configuration:</a></li>
+<li><a href="#_models_configuration_management">Models-Configuration Management:</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_configuration_details"><a class="anchor" href="#_configuration_details"></a>Configuration Details:</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>*An artifact is a singular versioned file which represents an iteration of code
-that should be deployed.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>There are two types of configurations: Launch-Configuration and Models-Configuration.</p>
+</li>
+<li>
+<p>Launch-Configuration:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>DeployDB is launched with this configuration provided in the YAML file.</p>
+</li>
+<li>
+<p>The YAML file is passed at the command line (Ref: <a href="running.html#To run the server">Running the Server</a>)</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">deploydb.example.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml">    <span class="comment"># Database specifics</span>
+    <span class="key">database</span>:
+      <span class="key">driverClass</span>: <span class="string"><span class="content">org.h2.Driver</span></span>
+      <span class="key">user</span>: <span class="string"><span class="content">nobody</span></span>
+      <span class="key">url</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">jdbc:h2:./deployDB.example.db</span><span class="delimiter">&quot;</span></span>
+    
+    <span class="comment"># Models-Configuration directory (cannonical path)</span>
+    <span class="comment"># YAML configuration files for models - services, environments, pipelines,</span>
+    <span class="comment"># webhooks and promotions - should be stored in respective sub-directories</span>
+    <span class="key">configDirectory</span>: <span class="string"><span class="content">config</span></span>
+    
+    <span class="comment"># Whoas library specifics</span>
+    <span class="key">whoas</span>:
+      <span class="key">queue</span>:
+        <span class="key">type</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">com.github.lookout.whoas.InMemoryQueue</span><span class="delimiter">&quot;</span></span>
+        <span class="key">key</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">queue</span><span class="delimiter">&quot;</span></span>
+        <span class="key">hostname</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">localhost</span><span class="delimiter">&quot;</span></span>
+        <span class="key">port</span>: <span class="string"><span class="content">6379</span></span>
+      <span class="key">runnerType</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">com.github.lookout.whoas.SequentialHookRunner</span><span class="delimiter">&quot;</span></span>
+    
+    <span class="comment"># Logging specifics</span>
+    <span class="key">logging</span>:
+      <span class="key">level</span>: <span class="string"><span class="content">INFO</span></span>
+      <span class="key">loggers</span>:
+        <span class="key">org.hibernate.SQL</span>: <span class="string"><span class="content">ALL</span></span></code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Models-Configuration:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>When DeployDB is launched, it consumes Models-Configuration and creates model objects.</p>
+</li>
+<li>
+<p>The configuration driven models are Service, Environment, Pipeline, Promotion,
+Webhook, etc.</p>
+</li>
+<li>
+<p>These configuration driven models are used to create and manage Flows and Deployments
+(Ref: &lt;&lt;workflow.ad#DeployDB WorkFlow,WorkFlow)</p>
+</li>
+<li>
+<p>The Launch-Configuration provides the "configDirectory" path, a Models-Configuration
+directory path.</p>
+</li>
+<li>
+<p>YAML configurations for each Model are stored under the respective sub-directory.</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>${configDirectory} - base Models-Configuration directory path. E.g.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>/etc/deploydb/config/</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>${configDirectory}/services/ - Directory path for Service Models. E.g.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>/etc/deploydb/services/FunAsService.yml,</p>
+</li>
+<li>
+<p>/etc/deploydb/services/AuditLogAsService.yml,</p>
+</li>
+<li>
+<p><a href="internals.html#Services">Services Configuration</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>${configDirectory}/pipelines/ - Directory path for Pipeline Models. E.g.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>/etc/deploydb/pipelines/devtoprod.yml</p>
+</li>
+<li>
+<p><a href="internals.html#Pipelines">Pipelines Configuration</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>${configDirectory}/environments/ - Directory path for Environment Models. E.g.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>/etc/deploydb/environments/integ.yml</p>
+</li>
+<li>
+<p><a href="internals.html#Environment">Environments Configuration</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>${configDirectory}/promotions/ - Directory path for Promotion Models. E.g.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>/etc/deploydb/environments/jenkins-smoke.yml</p>
+</li>
+<li>
+<p><a href="internals.html#Promotions">Promotions Configuration</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>${configDirectory}/webhook/ - Directory path for Webhook Model (Note that
+ONLY 1 webhook file is allowed to represent global webhooks). E.g.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>/etc/deploydb/webhook/global.yml</p>
+</li>
+<li>
+<p><a href="internals.html#Configuring Webhooks">Webhook Configuration</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<h2 id="_reloading_models_configuration"><a class="anchor" href="#_reloading_models_configuration"></a>Reloading Models-Configuration:</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_internal_identifier"><a class="anchor" href="#_internal_identifier"></a>Internal identifier</h3>
-
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The configuration for models, can be changed and reloaded while DeployDB is running.</p>
+</li>
+<li>
+<p>An admin task is available to reload configuration from the "configDirectory".</p>
+</li>
+<li>
+<p>A POST to "http://&lt;server-host&gt;:&lt;port&gt;/tasks/configReload" from admin app will
+invoke this task.</p>
+</li>
+<li>
+<p>Reloading a changed configuration would have no impact on the extant in-progress or
+verified deployments.</p>
+</li>
+</ol>
 </div>
-<div class="sect2">
-<h3 id="_group"><a class="anchor" href="#_group"></a>Group</h3>
-
 </div>
-<div class="sect2">
-<h3 id="_name"><a class="anchor" href="#_name"></a>Name</h3>
-
+</div>
+<div class="sect1">
+<h2 id="_models_configuration_management"><a class="anchor" href="#_models_configuration_management"></a>Models-Configuration Management:</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>DeployDB consumes the Models-Configuration during launch or when its reloaded
+via the admin task</p>
+</li>
+<li>
+<p>The configuration for each model is saved in DB to protect extant deployments
+from change in configuration.</p>
+</li>
+<li>
+<p>The contents of DB record are as follows:</p>
+<div class="literalblock">
+<div class="content">
+<pre>+----+----------+----------+---------------+-------------+
+| id | checksum | contents | ident         | type        |
++----+----------+----------+---------------+-------------+
+| 1  | 0xdead   | &lt;YAML&gt;   | FunAsService  | Service     |
++----+----------+----------+---------------+-------------+
+| 2  | 0xdead   | &lt;YAML&gt;   | devtoprod     | Pipeline    |
++----+----------+----------+---------------+-------------+
+| 3  | 0xdead   | &lt;YAML&gt;   | integ         | Environment |
++----+----------+----------+---------------+-------------+
+| 4  | 0xdead   | &lt;YAML&gt;   | jenkins-smoke | Promotion   |
++----+----------+----------+---------------+-------------+
+| 5  | 0xdead   | &lt;YAML&gt;   | global        | Webhook     |
++----+----------+----------+---------------+-------------+
+| 6  | 0xbeef   | &lt;YAML&gt;   | FunAsService  | Service     |
++----+----------+----------+---------------+-------------+
+| 7  | 0xbeef   | &lt;YAML&gt;   | devtoprod     | Pipeline    |
++----+----------+----------+---------------+-------------+
+| 8  | 0xbeef   | &lt;YAML&gt;   | integ         | Environment |
++----+----------+----------+---------------+-------------+
+| 9  | 0xbeef   | &lt;YAML&gt;   | jenkins-smoke | Promotion   |
++----+----------+----------+---------------+-------------+
+| 10 | 0xbeef   | &lt;YAML&gt;   | global        | Webhook     |
++----+----------+----------+---------------+-------------+</pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>checksum - of the base Models-Configuration directory. Remains constant for a given iteration
+of the Models-Configuration</p>
+</li>
+<li>
+<p>contents - of YMAL file in String format</p>
+</li>
+<li>
+<p>ident - identifier for the model</p>
+</li>
+<li>
+<p>type - type of model (e.g. Service, Pipeline, etc.)</p>
+</li>
+<li>
+<p>The contents of (checksum, ident, type) will form a unique key</p>
+</li>
+<li>
+<p>Thus, each change in configuration will create new DB records</p>
+</li>
+<li>
+<p>As shown in the table above: Rows 1 thr 5 were added on initial DeployDB launch. And rows
+6 thr 10 were populated on reload after a config change.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Impact on WorkFlow:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>When Flow is created, the checksum is stored in the Flow to associate the Models-Configuration with it.</p>
+</li>
+<li>
+<p>When subsequent triggers are executed on the Flow, it retrieves Models-Configuration from DB
+and uses it. This allows us to Models-Configuration to change while Flows and Deployments
+are being verified.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-02-17 14:06:33 EST
+Last updated 2015-04-01 10:22:35 EDT
 </div>
 </div>
 </body>
