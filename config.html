@@ -537,7 +537,7 @@ table.CodeRay td.code>pre{padding:0}
 </ol>
 </div>
 <div class="listingblock">
-<div class="title">deploydb.example.yml</div>
+<div class="title">deploydb.launch.yml</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="yaml">    <span class="comment"># Database specifics</span>
     <span class="key">database</span>:
@@ -696,8 +696,23 @@ ONLY 1 webhook file is allowed to represent global webhooks). E.g.</p>
 invoke this task.</p>
 </li>
 <li>
-<p>Reloading a changed configuration would have no impact on the extant in-progress or
+<p>Reloading a changed configuration would have no impact on the in-progress or
 verified deployments.</p>
+</li>
+<li>
+<p>Reading the configuration during DeployDB version upgrade should have no impact on
+the in-progress or verified deployments, if following rules are followed by the DeployDB
+developer:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Do not change data type of the existing fields in Models (e.g. Service, Pipeline, etc)</p>
+</li>
+<li>
+<p>New fields can be added in Models, but do not make new fields mandatory</p>
+</li>
+</ol>
+</div>
 </li>
 </ol>
 </div>
@@ -795,7 +810,7 @@ are being verified.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-04-01 10:22:35 EDT
+Last updated 2015-04-03 14:59:35 EDT
 </div>
 </div>
 </body>

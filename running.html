@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0">
-<title>Running The Application</title>
+<title>Running the deploydb from bintray</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -505,21 +505,97 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_running_the_application">Running The Application</a></li>
+<li><a href="#_running_the_deploydb_from_bintray">Running the deploydb from bintray</a>
+<ul class="sectlevel2">
+<li><a href="#_running_the_deploydb_from_github_repo">Running the  deploydb from github repo</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_running_the_application"><a class="anchor" href="#_running_the_application"></a>Running The Application</h2>
+<h2 id="_running_the_deploydb_from_bintray"><a class="anchor" href="#_running_the_deploydb_from_bintray"></a>Running the deploydb from bintray</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>To test the example application on localhost run the following commands.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Download the deploydb-*tar from bintray</p>
+</li>
+<li>
+<p>Uncompress the tar file</p>
+</li>
+<li>
+<p>Create deploydb model configuration. Check the following directory link for configuration template
+files for the deploydb models.
+Make sure all the model configuration files are <strong><em>stored in a single</em></strong> directory</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>https://github.com/lookout/deploydb/tree/master/example/modelConfig</pre>
+</div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>To package the example run.</p>
+<p>Create deploydb application configuration. Check the following link for template of this
+configuration</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>https://github.com/lookout/deploydb/blob/master/example/deploydb.launch.yml</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Update the model configuration directory parameter in the application configuration</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>configDirectory: &lt;model-directory-name/path&gt;</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Setup the database before starting the deploydb. Use the created application configuration from the
+above section</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./bin/deploydb db migrate &lt;application-configuration&gt;.yml</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start the deploydb using following command</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./bin/deploydb server &lt;application-configuration&gt;.yml</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_running_the_deploydb_from_github_repo"><a class="anchor" href="#_running_the_deploydb_from_github_repo"></a>Running the  deploydb from github repo</h3>
+<div class="paragraph">
+<p>To run the application on localhost run the following commands.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Package the deploydb from source using following command</p>
 </li>
 </ul>
 </div>
@@ -531,25 +607,29 @@ table.CodeRay td.code>pre{padding:0}
 <div class="ulist">
 <ul>
 <li>
-<p>To setup the h2 database run (stored in current directory as deploydb.example.db).</p>
+<p>Setup the database using following command. Default database is H2 and db file is stored in
+current directory as deploydb.example.db.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>  java -jar build/libs/deploydb-0.1.0-all.jar db migrate deploydb.example.yml</pre>
+<pre>  java -jar build/libs/deploydb-*-all.jar db migrate example/deploydb.launch.yml</pre>
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>To run the server (it reads configuration from config/ directory).</p>
+<p>Run the deploydb using following command. The last argument of the command below is the application
+configuration file of the deploydb. Please check and update this file as required. An example model
+configuration for webhooks, service and environment etc is present in example/modelConfig directory.
+Change the content of these model configuration files to the required values.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>  java -jar build/libs/deploydb-0.1.0-all.jar server example.yml</pre>
+<pre>  java -jar build/libs/deploydb-*-all.jar server example/deploydb.launch.yml</pre>
 </div>
 </div>
 <div class="ulist">
@@ -579,9 +659,10 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 </div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-03-30 09:17:31 EDT
+Last updated 2015-04-03 15:26:30 EDT
 </div>
 </div>
 </body>
