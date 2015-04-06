@@ -535,7 +535,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Flow - F1</p>
 </li>
 <li>
-<p>Enviroments - E1, E2, E3</p>
+<p>Environments - E1, E2, E3</p>
 </li>
 <li>
 <p>Pipelines - PL2 = (E1, E2, E3)</p>
@@ -580,7 +580,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Create deployments with State=not-started [D1, D2, D3]</p>
+<p>Create deployments with Status=NOT_STARTED [D1, D2, D3]</p>
 </li>
 <li>
 <p>Deployment (D1) contains (E1, Promotions [P1, P2]), etc</p>
@@ -596,18 +596,21 @@ table.CodeRay td.code>pre{padding:0}
 <p>Store Artifact (A1’), Service (S1), Deployments [D1, D2, D3]</p>
 </li>
 <li>
-<p>ArtifactId and ServiceId would be unique for the flow (key)</p>
+<p>ArtifactId and ServiceId would be unique for the flow</p>
 </li>
 <li>
-<p>Set Flow State=inProgress</p>
+<p>Set Flow Status=CREATED</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Get next Deployment D1 from the list (w/ state=notStarted)</p>
+<p>Get next Deployment D1 from the list (w/ Status=NOT_STARTED)</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
+<li>
+<p>Update Deployment (D1) Status=CREATED</p>
+</li>
 <li>
 <p>For each webhook for Deployment-created:</p>
 <div class="olist lowerroman">
@@ -637,7 +640,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Lookup Deployment (D1) from the Id received in the trigger</p>
 </li>
 <li>
-<p>Update State=started</p>
+<p>Update Deployment (D1) Status=STARTED</p>
 </li>
 <li>
 <p>For each webhook for Deployment-started</p>
@@ -665,7 +668,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Lookup Deployment (D1) from the Id received in the trigger</p>
 </li>
 <li>
-<p>Update deployment (D1) State=completed</p>
+<p>Update Deployment (D1) Status=COMPLETED</p>
 </li>
 <li>
 <p>For each webhook for Deployment-completed</p>
@@ -697,30 +700,30 @@ table.CodeRay td.code>pre{padding:0}
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>If P1 resultStatus=failed in the PromotionResults in the trigger</p>
+<p>If P1 resultStatus=FAILED in the PromotionResults in the trigger</p>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p>Update Depolyment (D1) with Promotion-state=failed</p>
+<p>Update Deployment (D1) with Promotion-Status=FAILED</p>
 </li>
 <li>
 <p>From Service (S1) find failureStrategy (STOP to begin with)</p>
 </li>
 <li>
-<p>Update Deployment State=failed</p>
+<p>Update Deployment (D1) Status=FAILED</p>
 </li>
 <li>
-<p>Update Flow State=failed</p>
+<p>Update Flow (F1) Status=FAILED</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>If resultStatus=passed in the PromotionResults in the trigger</p>
+<p>If resultStatus=SUCCESS in the PromotionResults in the trigger</p>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p>Update Depolyment (D1) with Promotion&#8217;s (P1) State=success
+<p>Update Deployment (D1) with Promotion&#8217;s (P1) Status=SUCCESS
 .For each webhook for Promotion-completed:</p>
 </li>
 </ol>
@@ -740,14 +743,20 @@ table.CodeRay td.code>pre{padding:0}
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Update Deployment State=success</p>
+<p>Update Deployment (D1) Status=SUCCESS</p>
 </li>
 <li>
-<p>Get next deployment (D2) from the list (w/ state=notStarted)</p>
+<p>Get next deployment (D2) from the list (w/ Status=NOT_STARTED)</p>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
 <p>For each webhook for Deployment-created:</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Update Deployment (D2) Status=CREATED</p>
 <div class="olist upperalpha">
 <ol class="upperalpha" type="A">
 <li>
@@ -759,15 +768,12 @@ table.CodeRay td.code>pre{padding:0}
 </ol>
 </div>
 </li>
-</ol>
-</div>
-</li>
 <li>
-<p>If no deployments in the list with State=notStarted,</p>
+<p>If no deployments in the list with Status=NOT_STARTED,</p>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p>Update Flow State=Success</p>
+<p>Update Flow (F1) Status=SUCCESS</p>
 </li>
 </ol>
 </div>
@@ -782,7 +788,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-02-20 11:26:52 PST
+Last updated 2015-04-03 11:46:59 EDT
 </div>
 </div>
 </body>
