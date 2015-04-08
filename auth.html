@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0">
-<title>#DeployDB Internals</title>
+<title>#DeployDB Authentication</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -502,440 +502,173 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-<h1>#DeployDB Internals</h1>
+<h1>#DeployDB Authentication</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_web_hooks">Web hooks</a></li>
-<li><a href="#_events">Events</a>
+<li><a href="#_types_of_rest_api_authentication">Types of REST API Authentication:</a>
 <ul class="sectlevel2">
-<li><a href="#_notifications">Notifications</a></li>
-<li><a href="#_triggers">Triggers</a></li>
-<li><a href="#_configuring_webhooks">Configuring Webhooks</a></li>
+<li><a href="#_no_authentication">No Authentication</a></li>
+<li><a href="#_basic_authentication_for_administrator">Basic Authentication for Administrator</a></li>
+<li><a href="#_basic_authentication">Basic Authentication</a></li>
+<li><a href="#_ldap_authentication">LDAP Authentication</a></li>
+<li><a href="#_credentials_for_outbound_rest_calls">Credentials for outbound REST calls</a></li>
 </ul>
 </li>
-<li><a href="#_queueing">Queueing</a></li>
-<li><a href="#_data_storage">Data storage</a></li>
-<li><a href="#_environments_pipelines_promotions">Environments/Pipelines/Promotions</a>
-<ul class="sectlevel2">
-<li><a href="#_environments">Environments</a></li>
-<li><a href="#_pipelines">Pipelines</a></li>
-<li><a href="#_services">Services</a></li>
-<li><a href="#_promotions">Promotions</a></li>
-<li><a href="#_flow_diagram">Flow Diagram</a></li>
-</ul>
-</li>
+<li><a href="#_security">Security</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>This document outlines some of the design internals of DeployDB as an
-application. This does not include the interactions with other services (e.g. CI,
-deployment orchestration) but rather the interactions between different
-components within the conceptual "DeployDB box."</p>
-</div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="_web_hooks"><a class="anchor" href="#_web_hooks"></a>Web hooks</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>"Web hooks" in this section technically covers "web hooks" but also public APIs
-that other services like Jenkins might use to trigger changes in the DeployDB
-system.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_events"><a class="anchor" href="#_events"></a>Events</h2>
+<h2 id="_types_of_rest_api_authentication"><a class="anchor" href="#_types_of_rest_api_authentication"></a>Types of REST API Authentication:</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_notifications"><a class="anchor" href="#_notifications"></a>Notifications</h3>
-<div class="paragraph">
-<p><strong>Outgoing</strong> events, e.g. webhooks, which should be invoked every time the
-internal DeployDB state machine changes.</p>
-</div>
+<h3 id="_no_authentication"><a class="anchor" href="#_no_authentication"></a>No Authentication</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Deployment created, in a non-started status (with Deployment, Artifact, Service, Environment)</p>
+<p>Authentication is NOT performed for the REST APIs</p>
 </li>
 <li>
-<p>Deployment started, e.g. a deployer service has begun to <strong>actually</strong> deploy (with Deployment, Artifact, Service, Environment)</p>
+<p>The credentials passed with the REST API are ignored</p>
 </li>
 <li>
-<p>Deployment completed (with Deployment, Artifact, Service, Environment)</p>
-</li>
-<li>
-<p>Promotion completed (with Deployment, Promotion status)</p>
+<p>This is a default setting</p>
 </li>
 </ul>
 </div>
+<div class="listingblock">
+<div class="title">deploydb.launch.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">authentication</span>:
+  <span class="key">type</span>: <span class="string"><span class="content">none</span></span></code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_triggers"><a class="anchor" href="#_triggers"></a>Triggers</h3>
-<div class="paragraph">
-<p>Inbound events, there&#8217;s a large symmetry between <a href="#_notifications">Notifications</a> and
-Triggers. These would be coming from external sources, such as Jenkins, which
-push or change the internal DeployDB state machine.</p>
-</div>
+<h3 id="_basic_authentication_for_administrator"><a class="anchor" href="#_basic_authentication_for_administrator"></a>Basic Authentication for Administrator</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Artifact of a new version is available</p>
-</li>
-<li>
-<p>Started Deployment</p>
-</li>
-<li>
-<p>Completed Deployment</p>
-</li>
-<li>
-<p>Report Promotion status</p>
+<p>This can be only enabled for REST APIs over the admin port</p>
 </li>
 </ul>
 </div>
+<div class="listingblock">
+<div class="title">deploydb.launch.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">http</span>:
+  <span class="key">adminUsername</span>: <span class="string"><span class="content">admin1234</span></span>
+  <span class="key">adminPassword</span>: <span class="string"><span class="content">password1234</span></span></code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_configuring_webhooks"><a class="anchor" href="#_configuring_webhooks"></a>Configuring Webhooks</h3>
-<div class="paragraph">
-<p>Webhooks can be configured at two levels, globally and per-environment. The
-reason for this distinction is to make it easier to drive behaviors in
-different environments through different deployer/orchestration servers (e.g.
-Rundeck-Integ, Rundeck-Prod).</p>
-</div>
-<div class="listingblock">
-<div class="title">webhooks.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">deployment</span>:
-    - <span class="string"><span class="content">started:</span></span>
-    - <span class="string"><span class="content">created:</span><span class="content">
-        - http://jenkins.example.com/job/notify-deploy-created/build</span></span>
-    - <span class="string"><span class="content">completed:</span><span class="content">
-        - http://jenkins.example.com/job/notify-deploy-completed/build</span></span>
-<span class="key">promotion</span>:
-    - <span class="string"><span class="content">completed:</span></span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>See <a href="#_environments">Environments</a> for environment specific webhook configuration</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_queueing"><a class="anchor" href="#_queueing"></a>Queueing</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Queueing is largely required to ensure the delivery of <a href="#_notifications">Notifications</a> and
-other out-bound web hooks.</p>
-</div>
-<div class="paragraph">
-<p>The queueing interface from the application should be abstracted enough to
-allow queueing to be backed by different queue providers, e.g.:</p>
-</div>
+<h3 id="_basic_authentication"><a class="anchor" href="#_basic_authentication"></a>Basic Authentication</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Redis (e.g. <a href="https://aws.amazon.com/elasticache/">ElastiCache</a>)</p>
-</li>
-<li>
-<p>Kafka</p>
-</li>
-<li>
-<p>etc</p>
+<p>This can be enabled for Admin and/or User level REST APIs</p>
 </li>
 </ul>
 </div>
+<div class="listingblock">
+<div class="title">deploydb.launch.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="error">authentication</span>
+  <span class="key">type</span>: <span class="string"><span class="content">basic</span></span>
+  <span class="key">admin</span>:
+    <span class="key">admin_user1</span> : <span class="string"><span class="content">admin_password1</span></span>
+    <span class="key">admin_user2</span> : <span class="string"><span class="content">admin_password2</span></span>
+  <span class="key">user</span>:
+    <span class="key">user1</span> : <span class="string"><span class="content">password1</span></span>
+    <span class="key">user2</span> : <span class="string"><span class="content">password2</span></span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ldap_authentication"><a class="anchor" href="#_ldap_authentication"></a>LDAP Authentication</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>This is configured in conjunction with
+<a href="https://github.com/yammer/dropwizard-auth-ldap/blob/master/README.md#configuration">ldap configuration</a></p>
+</li>
+<li>
+<p>The adminGroupName can be provided to validate the user against it.</p>
+</li>
+<li>
+<p>The cache-policy should be configured to improve our application&#8217;s performance.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">deploydb.launch.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="error">authentication</span>
+  <span class="key">type</span>: <span class="string"><span class="content">ldap</span></span>
+  <span class="key">adminGroupName</span>: <span class="string"><span class="content">adminGroupLevel</span></span>
+
+  <span class="key">ldap</span>:
+    <span class="key">uri</span>: <span class="string"><span class="content">ldaps://myldap.com:636</span></span>
+    <span class="comment"># Cache 10000 credentials for at least 10 minutes</span>
+    <span class="key">cachePolicy</span>: <span class="string"><span class="content">maximumSize=10000, expireAfterWrite=10m</span></span>
+    <span class="key">userFilter</span>: <span class="string"><span class="content">ou=people,dc=yourcompany,dc=com</span></span>
+    <span class="key">groupFilter</span>: <span class="string"><span class="content">ou=groups,dc=yourcompany,dc=com</span></span>
+    <span class="key">userNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
+    <span class="key">groupNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
+    <span class="key">groupMembershipAttribute</span>: <span class="string"><span class="content">memberUid</span></span>
+    <span class="key">groupClassName</span>: <span class="string"><span class="content">posixGroup</span></span>
+    <span class="key">restrictToGroups</span>:
+        - <span class="string"><span class="content">user</span></span>
+        - <span class="string"><span class="content">admin</span></span>
+        - <span class="string"><span class="content">bots</span></span>
+    <span class="key">connectTimeout</span>: <span class="string"><span class="content">500ms</span></span>
+    <span class="key">readTimeout</span>: <span class="string"><span class="content">500ms</span></span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_credentials_for_outbound_rest_calls"><a class="anchor" href="#_credentials_for_outbound_rest_calls"></a>Credentials for outbound REST calls</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>These credentials are used for all the REST calls initiated by DeployDB.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">deploydb.launch.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">authentication</span>:
+  <span class="key">outbound</span>:
+    <span class="key">username1</span> : <span class="string"><span class="content">password1</span></span></code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_data_storage"><a class="anchor" href="#_data_storage"></a>Data storage</h2>
+<h2 id="_security"><a class="anchor" href="#_security"></a>Security</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The data storage layer is what is responsible for persisting runtime
-information into a database. This should be abstracted through a JDBC connector.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_environments_pipelines_promotions"><a class="anchor" href="#_environments_pipelines_promotions"></a>Environments/Pipelines/Promotions</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Current thinking: if pipelines are defined in "configuration" as are
-"environments" then the actual registration of an artifact probably shouldn&#8217;t
-be in configuration but rather registered via an API.</p>
-</div>
-<div class="paragraph">
-<p>It might make sense to have that registration API write some YAML to disk or
-something and allow DeployDB to register artifacts from the same place on disk</p>
-</div>
-<div class="sect2">
-<h3 id="_environments"><a class="anchor" href="#_environments"></a>Environments</h3>
-<div class="listingblock">
-<div class="title">environments/integ.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">name</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">DeployDB Primary Integration</span><span class="delimiter">&quot;</span></span>
-<span class="key">webhooks</span>:
-  <span class="key">deployment</span>:
-    - <span class="string"><span class="content">started:</span></span>
-    - <span class="string"><span class="content">created:</span><span class="content">
-        - http://jenkins.example.com/job/integ-deploy-created/build</span></span>
-    - <span class="string"><span class="content">completed:</span><span class="content">
-        - http://jenkins.example.com/job/integ-deploy-completed/build</span></span>
-  <span class="key">promotion</span>:
-    - <span class="string"><span class="content">completed:</span></span></code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_pipelines"><a class="anchor" href="#_pipelines"></a>Pipelines</h3>
-<div class="listingblock">
-<div class="title">pipelines/devtoprod.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">environments</span>:
-  - <span class="string"><span class="content">dev-alpha</span></span>
-  - <span class="string"><span class="content">dev-beta</span></span>
-  - <span class="string"><span class="content">integ</span></span>
-  - <span class="string"><span class="content">preprod:</span></span>
-    <span class="key">promotions</span>:
-        - <span class="string"><span class="content">prod-preflight</span></span>
-        - <span class="string"><span class="content">manual</span></span>
-  - <span class="string"><span class="content">prod</span></span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The Pipeline concept allows for the configuring of a linear set of Environments
-for Artifacts to be passed through. At each step of the way the Promotions
-defined for a given Service traversing the pipeline will need to be
-validated. E.g. the "FoaS" Service much execute its Promotions between
-<code>integ</code> and <code>preprod</code>, but before going from <code>preprod</code> to <code>prod</code> the
-<code>prod-preflight</code> and a <code>manual</code> Promotion must be satisfied.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_services"><a class="anchor" href="#_services"></a>Services</h3>
-<div class="listingblock">
-<div class="title">services/foas.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">name</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Fun as a Service</span><span class="delimiter">&quot;</span></span>
-<span class="key">artifacts</span>:
-  - <span class="string"><span class="content">com.github.lookout:foas</span></span>
-  - <span class="string"><span class="content">com.github.lookout.puppet:puppet-foas</span></span>
-  - <span class="string"><span class="content">com.github.lookout:puppet-mysql</span></span>
-<span class="key">pipelines</span>:
-  - <span class="string"><span class="content">devtoprod</span></span>
-<span class="key">promotions</span>:
-  - <span class="string"><span class="content">status-check</span></span>
-  - <span class="string"><span class="content">jenkins-smoke</span></span>
-<span class="key">failure_strategy</span>: <span class="string"><span class="content">stop</span></span></code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The "artifact" declarations in the configuration file are using the
-<code>groupname:artifactname</code> syntax which ensure that we can uniquely identify an
-krtifact. It is expected that all artifacts have at least a unique
-<code>groupname:artifactname</code> for storage in the data store.
-</td>
-</tr>
-</table>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Service Configuration Properties</caption>
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
-<th class="tableblock halign-left valign-top">Type/Options</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The descriptive name of the service being defined</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">artifacts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A list of <code>groupname:artifactname</code> pairings defining artifacts which compose the service</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of Strings</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">pipelines</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Named pipeline to push these Artifacts through (<em>One pipeline per service is currently supported</em>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of valid pipeline identifier Strings</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">promotions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Named promotions to execute after a Deployment of any of the Artifacts
-completes, in every stage of pipeline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of valid promotion identifier Strings</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">failure_strategy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">What should happen with an artifact that is part of this service when a
-Deployment fails, or the Promotions indicate that the Artifact isn&#8217;t valid.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">One of "stop" (stop pipeline), "rollback" (revert to latest version
-successfully deployed to this environment) or "full_rollback" (revert to latest
-version to successfully complete pipeline)</p></td>
-</tr>
-</tbody>
-</table>
-<div class="sect3">
-<h4 id="_service_defaults"><a class="anchor" href="#_service_defaults"></a>Service Defaults</h4>
-<div class="paragraph">
-<p>DeployDB should support a special file called <code>_defaults.yml</code> which can contain
-default Artifacts which can be considered part of every Service.  This might
-include a <code>puppet-users</code> module, <code>logstash-agent</code> or other globally applicable
-Artifacts which should trigger Deployments for the given Services..</p>
-</div>
-<div class="listingblock">
-<div class="title">services/_defaults.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">artifacts</span>:
-  - <span class="string"><span class="content">com.github.lookout:puppet-users</span></span>
-  - <span class="string"><span class="content">com.github.lookout:puppet-datadog</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_promotions"><a class="anchor" href="#_promotions"></a>Promotions</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The "promotion" concepts described below are not final and really just
-brainstorming to flesh out how configuration of promotions as a concept <strong>might</strong>
-work.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">promotions/jenkins-smoke.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">JenkinsPromotion</span></span>
-<span class="key">jobs</span>:
-  - <span class="string"><span class="content">basic-smokes-test</span></span>
-  - <span class="string"><span class="content">basic-perf-test</span></span>
-  - <span class="string"><span class="content">end2end-smoke-test</span></span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>JenkinsPromotion</code> as a typed concept would require a list of Jenkins job names
-that would be required to succeed in order to execute the promotion.</p>
-</div>
-<div class="listingblock">
-<div class="title">promotions/status-check.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">WebhookPromotion</span></span>
-<span class="key">url</span>: <span class="string"><span class="content">/healhcheck</span></span>
-<span class="key">status</span>: <span class="string"><span class="content">200</span></span>
-<span class="key">timeout</span>: <span class="string"><span class="content">15</span></span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>WebhookPromotion</code> would be something that would make a HTTP GET request to the
-application and see if it&#8217;s online before identifying it as "promoted." How
-this might work with a cluster of applications in one service, I&#8217;m not yet sure.</p>
-</div>
-<div class="listingblock">
-<div class="title">promotions/manual-validate.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">ManualPromotion</span></span>
-<span class="key">approverGroupName</span>: <span class="string"><span class="content">SuperImpGroup</span></span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>ManualPromotion</code> is a special case scenario where the UI for DeployDB is
-going to need to present a button to a user to click.</p>
-</div>
-<div class="paragraph">
-<p>If approverGroupName is configured and <a href="auth.html#LDAP Authentication">LDAP authentication</a>
-is enabled, then the user of REST API will be authenticated against that group name. If LDAP
-authentication is NOT enabled, then the approverGroupName is ignored.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_flow_diagram"><a class="anchor" href="#_flow_diagram"></a>Flow Diagram</h3>
-<div class="literalblock">
-<div class="content">
-<pre>initiator        deployDb            deployer1        deployer2       tester
-   +                 +                   +               +               +
-   |   A1' created   |                   |               |               |
-   +-----------------&gt;                   |               |               |
-   | create artifact | D1=ns, A1',S1,E1  |               |               |
-   |                 +-------------------&gt;               |               |
-   |                 | Deployment Start  |               |               |
-   |                 |                   |               |               |
-   |                 |    D1=started     |               |               |
-   |                 &lt;-------------------+               |               |
-   |                 | Deployment Startd |               |               |
-   |                 |                   |               |               |
-   |                 |    D1=compltd     |               |               |
-   |                 &lt;-------------------+               |               |
-   |                 | Deployment Compltd|               |               |
-   |                 |                   +               +               |
-   |                 |   D1, A1',S1,S1  (Deployment Completed)           |
-   |                 +-------------------+---------------+---------------&gt;
-   |                 |                   |               |               |
-   |                 |   D1, P1-PASSED   |               |               |
-   |                 &lt;---------+-----------------------------------------+
-   |                 |                   |               |               |
-   |                 | D2=ns, A1',S1,E2  |               |               |
-   |                 +-----------------------------------&gt;               |
-   |                 | Deployment Start  |               |               |
-   |                 |                   |               |               |
-   |                 |    D2=started     |               |               |
-   |                 &lt;-----------------------------------+               |
-   |                 | Deployment Startd |               |               |
-   |                 |                   |               |               |
-   |                 |    D2=compltd     |               |               |
-   |                 &lt;-----------------------------------+               |
-   |                 | Deployment Compltd|               |               |
-   |                 |                   +               +               |
-   |                 |   D2, A1',S1,E2  (Deployment Completed)           |
-   |                 +-------------------+---------------+---------------&gt;
-   |                 |                   |               |               |
-   |                 |   D2, P1-PASSED   |               |               |
-   |                 &lt;---------+-----------------------------------------+
-   |                 |                   |               |               |
-   +                 +                   +               +               +</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Legend:
-Service S1 = Artifacts (A1, A2),Pipline (PL1), Promotions (P1)
-Pipline PL1 = Enviroment (E1), Enviroment (E2)
-ns = notStarted</pre>
-</div>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="http://www.dropwizard.io/manual/configuration.html#https">https</a> can be enabled
+in the launch config for end-to-end security</p>
+</li>
+<li>
+<p>All of the REST APIs are available over HTTPS.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-04-08 10:29:37 EDT
+Last updated 2015-04-08 10:28:37 EDT
 </div>
 </div>
 </body>
