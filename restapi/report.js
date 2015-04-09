@@ -7,11 +7,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 4274248000,
+  "duration": 3539582000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6896000,
+  "duration": 7375000,
   "status": "passed"
 });
 formatter.scenario({
@@ -77,28 +77,28 @@ formatter.match({
   "location": "PromotionSteps.groovy:24"
 });
 formatter.result({
-  "duration": 102942000,
+  "duration": 88409000,
   "status": "passed"
 });
 formatter.match({
   "location": "EnvironmentSteps.groovy:16"
 });
 formatter.result({
-  "duration": 4031000,
+  "duration": 5151000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 4248000,
+  "duration": 4767000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 2555000,
+  "duration": 4252000,
   "status": "passed"
 });
 formatter.match({
@@ -111,7 +111,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 805505000,
+  "duration": 781475000,
   "status": "passed"
 });
 formatter.match({
@@ -124,26 +124,26 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 7141000,
+  "duration": 6858000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 74589000,
+  "duration": 62263000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 53542000,
+  "duration": 35032000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 702000,
+  "duration": 465000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1330955000,
+  "duration": 1060155000,
   "status": "passed"
 });
 formatter.scenario({
@@ -185,7 +185,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 56322000,
+  "duration": 71162000,
   "status": "passed"
 });
 formatter.match({
@@ -198,15 +198,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 278000,
+  "duration": 198000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 31578000,
+  "duration": 34149000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 866687000,
+  "duration": 1057289000,
   "status": "passed"
 });
 formatter.scenario({
@@ -248,7 +248,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 44212000,
+  "duration": 67318000,
   "status": "passed"
 });
 formatter.match({
@@ -261,15 +261,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 122000,
+  "duration": 238000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 16948000,
+  "duration": 24455000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 829560000,
+  "duration": 798967000,
   "status": "passed"
 });
 formatter.scenario({
@@ -311,7 +311,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 36913000,
+  "duration": 54692000,
   "status": "passed"
 });
 formatter.match({
@@ -324,15 +324,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 108000,
+  "duration": 109000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 14939000,
+  "duration": 22105000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 911696000,
+  "duration": 693798000,
   "status": "passed"
 });
 formatter.scenario({
@@ -374,7 +374,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 37210000,
+  "duration": 50541000,
   "status": "passed"
 });
 formatter.match({
@@ -387,15 +387,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 128000,
+  "duration": 129000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 16836000,
+  "duration": 15004000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 850240000,
+  "duration": 620150000,
   "status": "passed"
 });
 formatter.scenario({
@@ -436,7 +436,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:23"
 });
 formatter.result({
-  "duration": 49000,
+  "duration": 42000,
   "status": "passed"
 });
 formatter.match({
@@ -453,7 +453,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:26"
 });
 formatter.result({
-  "duration": 1683000,
+  "duration": 1359000,
   "status": "passed"
 });
 formatter.match({
@@ -466,7 +466,7 @@ formatter.match({
   "location": "HttpSteps.groovy:53"
 });
 formatter.result({
-  "duration": 27682000,
+  "duration": 27455000,
   "status": "passed"
 });
 formatter.match({
@@ -479,15 +479,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 109000,
+  "duration": 141000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11017000,
+  "duration": 17977000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 759010000,
+  "duration": 553179000,
   "status": "passed"
 });
 formatter.scenario({
@@ -528,7 +528,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:23"
 });
 formatter.result({
-  "duration": 28000,
+  "duration": 21000,
   "status": "passed"
 });
 formatter.match({
@@ -545,7 +545,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:26"
 });
 formatter.result({
-  "duration": 614000,
+  "duration": 626000,
   "status": "passed"
 });
 formatter.match({
@@ -558,7 +558,7 @@ formatter.match({
   "location": "HttpSteps.groovy:53"
 });
 formatter.result({
-  "duration": 24471000,
+  "duration": 30096000,
   "status": "passed"
 });
 formatter.match({
@@ -571,15 +571,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 106000,
+  "duration": 152000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9916000,
+  "duration": 14981000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 764839000,
+  "duration": 561067000,
   "status": "passed"
 });
 formatter.scenario({
@@ -620,7 +620,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:23"
 });
 formatter.result({
-  "duration": 26000,
+  "duration": 21000,
   "status": "passed"
 });
 formatter.match({
@@ -637,7 +637,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:26"
 });
 formatter.result({
-  "duration": 555000,
+  "duration": 319000,
   "status": "passed"
 });
 formatter.match({
@@ -650,7 +650,7 @@ formatter.match({
   "location": "HttpSteps.groovy:53"
 });
 formatter.result({
-  "duration": 24320000,
+  "duration": 33347000,
   "status": "passed"
 });
 formatter.match({
@@ -663,15 +663,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 105000,
+  "duration": 98000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11457000,
+  "duration": 22000000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 704481000,
+  "duration": 446283000,
   "status": "passed"
 });
 formatter.scenario({
@@ -712,7 +712,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:23"
 });
 formatter.result({
-  "duration": 40000,
+  "duration": 28000,
   "status": "passed"
 });
 formatter.match({
@@ -729,7 +729,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:26"
 });
 formatter.result({
-  "duration": 537000,
+  "duration": 676000,
   "status": "passed"
 });
 formatter.match({
@@ -742,7 +742,7 @@ formatter.match({
   "location": "HttpSteps.groovy:53"
 });
 formatter.result({
-  "duration": 21110000,
+  "duration": 32134000,
   "status": "passed"
 });
 formatter.match({
@@ -755,15 +755,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 107000,
+  "duration": 105000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12090000,
+  "duration": 24819000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 692298000,
+  "duration": 547669000,
   "status": "passed"
 });
 formatter.scenario({
@@ -814,21 +814,21 @@ formatter.match({
   "location": "EnvironmentSteps.groovy:16"
 });
 formatter.result({
-  "duration": 236000,
+  "duration": 358000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 184000,
+  "duration": 293000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 157000,
+  "duration": 260000,
   "status": "passed"
 });
 formatter.match({
@@ -841,7 +841,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 33567000,
+  "duration": 40695000,
   "status": "passed"
 });
 formatter.match({
@@ -854,15 +854,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 108000,
+  "duration": 240000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11139000,
+  "duration": 15955000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 737036000,
+  "duration": 473076000,
   "status": "passed"
 });
 formatter.scenario({
@@ -913,21 +913,21 @@ formatter.match({
   "location": "PromotionSteps.groovy:17"
 });
 formatter.result({
-  "duration": 969000,
+  "duration": 855000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 250000,
+  "duration": 177000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 210000,
+  "duration": 154000,
   "status": "passed"
 });
 formatter.match({
@@ -940,7 +940,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 26137000,
+  "duration": 35542000,
   "status": "passed"
 });
 formatter.match({
@@ -953,15 +953,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 101000,
+  "duration": 156000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9548000,
+  "duration": 24754000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 697269000,
+  "duration": 435308000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1012,21 +1012,21 @@ formatter.match({
   "location": "PromotionSteps.groovy:17"
 });
 formatter.result({
-  "duration": 307000,
+  "duration": 271000,
   "status": "passed"
 });
 formatter.match({
   "location": "EnvironmentSteps.groovy:16"
 });
 formatter.result({
-  "duration": 246000,
+  "duration": 304000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 187000,
+  "duration": 292000,
   "status": "passed"
 });
 formatter.match({
@@ -1039,7 +1039,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 28731000,
+  "duration": 33281000,
   "status": "passed"
 });
 formatter.match({
@@ -1052,15 +1052,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 114000,
+  "duration": 107000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9576000,
+  "duration": 13484000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 702661000,
+  "duration": 361598000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1111,21 +1111,21 @@ formatter.match({
   "location": "PromotionSteps.groovy:17"
 });
 formatter.result({
-  "duration": 220000,
+  "duration": 330000,
   "status": "passed"
 });
 formatter.match({
   "location": "EnvironmentSteps.groovy:16"
 });
 formatter.result({
-  "duration": 165000,
+  "duration": 246000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 187000,
+  "duration": 266000,
   "status": "passed"
 });
 formatter.match({
@@ -1138,7 +1138,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 28144000,
+  "duration": 28308000,
   "status": "passed"
 });
 formatter.match({
@@ -1151,11 +1151,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 199000,
+  "duration": 92000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 10000000,
+  "duration": 11860000,
   "status": "passed"
 });
 formatter.uri("api/artifact/deleting.feature");
@@ -1167,7 +1167,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 676414000,
+  "duration": 409983000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1197,7 +1197,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:6"
 });
 formatter.result({
-  "duration": 4803000,
+  "duration": 5554000,
   "status": "passed"
 });
 formatter.match({
@@ -1210,7 +1210,7 @@ formatter.match({
   "location": "HttpSteps.groovy:21"
 });
 formatter.result({
-  "duration": 20760000,
+  "duration": 21414000,
   "status": "passed"
 });
 formatter.match({
@@ -1223,11 +1223,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 150000,
+  "duration": 95000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9347000,
+  "duration": 13685000,
   "status": "passed"
 });
 formatter.uri("api/artifact/reading.feature");
@@ -1239,11 +1239,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 695456000,
+  "duration": 412510000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 71000,
+  "duration": 117000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1289,7 +1289,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:6"
 });
 formatter.result({
-  "duration": 3525000,
+  "duration": 4235000,
   "status": "passed"
 });
 formatter.match({
@@ -1302,7 +1302,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 45350000,
+  "duration": 40564000,
   "status": "passed"
 });
 formatter.match({
@@ -1315,27 +1315,26 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 157000,
+  "duration": 128000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 4607000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:10.380Z\"}\n       |        false\n       {\"id\":1,\"createdAt\":\"2015-04-07T22:19:10.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:13)\n"
-});
-formatter.after({
-  "duration": 11657000,
+  "duration": 1350000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 28000,
+  "duration": 11343000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 26000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 738259000,
+  "duration": 431353000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1387,7 +1386,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:6"
 });
 formatter.result({
-  "duration": 3532000,
+  "duration": 4574000,
   "status": "passed"
 });
 formatter.match({
@@ -1400,7 +1399,7 @@ formatter.match({
   "location": "HttpSteps.groovy:61"
 });
 formatter.result({
-  "duration": 34010000,
+  "duration": 32148000,
   "status": "passed"
 });
 formatter.match({
@@ -1413,15 +1412,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 415000,
+  "duration": 440000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12480000,
+  "duration": 48661000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 779216000,
+  "duration": 409228000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1452,7 +1451,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 30105000,
+  "duration": 22697000,
   "status": "passed"
 });
 formatter.match({
@@ -1465,15 +1464,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 237000,
+  "duration": 220000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 13448000,
+  "duration": 10708000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 733356000,
+  "duration": 399392000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1510,7 +1509,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 32441000,
+  "duration": 26050000,
   "status": "passed"
 });
 formatter.match({
@@ -1523,19 +1522,19 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 163000,
+  "duration": 133000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12195000,
+  "duration": 10511000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 789455000,
+  "duration": 398180000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 66000,
+  "duration": 69000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1581,7 +1580,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:6"
 });
 formatter.result({
-  "duration": 4465000,
+  "duration": 2700000,
   "status": "passed"
 });
 formatter.match({
@@ -1594,7 +1593,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 65674000,
+  "duration": 51701000,
   "status": "passed"
 });
 formatter.match({
@@ -1607,31 +1606,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 104000,
+  "duration": 116000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 6306000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:13.638Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:14.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:69)\n"
-});
-formatter.after({
-  "duration": 13762000,
+  "duration": 3378000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 20000,
+  "duration": 8746000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 18000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 826559000,
+  "duration": 428355000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 66000,
+  "duration": 72000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1677,7 +1675,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 8235000,
+  "duration": 5248000,
   "status": "passed"
 });
 formatter.match({
@@ -1690,7 +1688,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 43236000,
+  "duration": 36274000,
   "status": "passed"
 });
 formatter.match({
@@ -1703,27 +1701,26 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 145000,
+  "duration": 101000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 11184000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:14.559Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:14.559Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:15.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:15.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:87)\n"
-});
-formatter.after({
-  "duration": 12230000,
+  "duration": 1433000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 54000,
+  "duration": 12126000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 19000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 874446000,
+  "duration": 436277000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1760,7 +1757,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 28167000,
+  "duration": 19517000,
   "status": "passed"
 });
 formatter.match({
@@ -1773,15 +1770,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 110000,
+  "duration": 96000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 62044000,
+  "duration": 9475000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 797665000,
+  "duration": 460256000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1818,7 +1815,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 27058000,
+  "duration": 18680000,
   "status": "passed"
 });
 formatter.match({
@@ -1831,15 +1828,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 150000,
+  "duration": 103000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9657000,
+  "duration": 8125000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 829253000,
+  "duration": 396868000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1876,7 +1873,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 29286000,
+  "duration": 22925000,
   "status": "passed"
 });
 formatter.match({
@@ -1889,15 +1886,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 150000,
+  "duration": 133000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12882000,
+  "duration": 8828000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 796047000,
+  "duration": 375848000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1933,7 +1930,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 9828000,
+  "duration": 5686000,
   "status": "passed"
 });
 formatter.match({
@@ -1946,7 +1943,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 22576000,
+  "duration": 19588000,
   "status": "passed"
 });
 formatter.match({
@@ -1959,19 +1956,19 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 93000,
+  "duration": 149000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 10379000,
+  "duration": 9078000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 803254000,
+  "duration": 376701000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 69000,
+  "duration": 67000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2017,7 +2014,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:6"
 });
 formatter.result({
-  "duration": 5651000,
+  "duration": 2913000,
   "status": "passed"
 });
 formatter.match({
@@ -2030,7 +2027,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 28735000,
+  "duration": 22171000,
   "status": "passed"
 });
 formatter.match({
@@ -2043,31 +2040,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 143000,
+  "duration": 97000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1800000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":1,\"createdAt\":\"2015-04-07T22:19:18.964Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"}\n       |        false\n       {\"id\":1,\"createdAt\":\"2015-04-07T22:19:19.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:138)\n"
-});
-formatter.after({
-  "duration": 11073000,
+  "duration": 824000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 24000,
+  "duration": 10128000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 26000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 805410000,
+  "duration": 368127000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 65000,
+  "duration": 63000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2113,7 +2109,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 6795000,
+  "duration": 3827000,
   "status": "passed"
 });
 formatter.match({
@@ -2126,7 +2122,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 24398000,
+  "duration": 20124000,
   "status": "passed"
 });
 formatter.match({
@@ -2139,31 +2135,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 125000,
+  "duration": 143000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1725000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":2,\"createdAt\":\"2015-04-07T22:19:19.822Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}\n       |        false\n       {\"id\":2,\"createdAt\":\"2015-04-07T22:19:20.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:156)\n"
-});
-formatter.after({
-  "duration": 10986000,
+  "duration": 1244000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 37000,
+  "duration": 9330000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 18000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 816832000,
+  "duration": 359167000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 76000,
+  "duration": 66000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2213,7 +2208,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 9737000,
+  "duration": 4442000,
   "status": "passed"
 });
 formatter.match({
@@ -2226,7 +2221,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 37729000,
+  "duration": 30246000,
   "status": "passed"
 });
 formatter.match({
@@ -2239,31 +2234,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 143000,
+  "duration": 167000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1567000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:20.687Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:21.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:174)\n"
-});
-formatter.after({
-  "duration": 10015000,
+  "duration": 1313000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 25000,
+  "duration": 20714000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 33000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 856852000,
+  "duration": 389346000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 95000,
+  "duration": 50000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2313,7 +2307,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 6390000,
+  "duration": 4106000,
   "status": "passed"
 });
 formatter.match({
@@ -2326,7 +2320,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 30072000,
+  "duration": 23926000,
   "status": "passed"
 });
 formatter.match({
@@ -2339,19 +2333,18 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 154000,
+  "duration": 148000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1995000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:21.608Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:21.608Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:22.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:22.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:192)\n"
+  "duration": 1652000,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 10228000,
+  "duration": 10662000,
   "status": "passed"
 });
 formatter.after({
@@ -2359,11 +2352,11 @@ formatter.after({
   "status": "passed"
 });
 formatter.before({
-  "duration": 829682000,
+  "duration": 423075000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 58000,
+  "duration": 103000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2413,7 +2406,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 6521000,
+  "duration": 4437000,
   "status": "passed"
 });
 formatter.match({
@@ -2426,7 +2419,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 29669000,
+  "duration": 25671000,
   "status": "passed"
 });
 formatter.match({
@@ -2439,31 +2432,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 115000,
+  "duration": 90000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1747000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:22.492Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:22.492Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:22.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:22.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:218)\n"
-});
-formatter.after({
-  "duration": 10775000,
+  "duration": 1059000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 26000,
+  "duration": 10275000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 18000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 767049000,
+  "duration": 414681000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 69000,
+  "duration": 66000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2513,7 +2505,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 8512000,
+  "duration": 5574000,
   "status": "passed"
 });
 formatter.match({
@@ -2526,7 +2518,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 32917000,
+  "duration": 21666000,
   "status": "passed"
 });
 formatter.match({
@@ -2539,31 +2531,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 139000,
+  "duration": 89000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 2233000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:23.312Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:23.312Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:23.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:23.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:245)\n"
-});
-formatter.after({
-  "duration": 25199000,
+  "duration": 1396000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 31000,
+  "duration": 9507000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 26000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 713025000,
+  "duration": 397232000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 73000,
+  "duration": 71000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2613,7 +2604,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 4925000,
+  "duration": 4720000,
   "status": "passed"
 });
 formatter.match({
@@ -2626,7 +2617,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 23166000,
+  "duration": 25377000,
   "status": "passed"
 });
 formatter.match({
@@ -2639,31 +2630,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 101000,
+  "duration": 90000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1663000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:24.099Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:24.099Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:24.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:24.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:272)\n"
-});
-formatter.after({
-  "duration": 7542000,
+  "duration": 1146000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 19000,
+  "duration": 7427000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 18000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 676032000,
+  "duration": 344033000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 74000,
+  "duration": 59000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2713,7 +2703,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 4784000,
+  "duration": 3788000,
   "status": "passed"
 });
 formatter.match({
@@ -2726,7 +2716,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 22197000,
+  "duration": 23027000,
   "status": "passed"
 });
 formatter.match({
@@ -2739,31 +2729,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 114000,
+  "duration": 142000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1409000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:24.816Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:24.816Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:25.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:25.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:299)\n"
-});
-formatter.after({
-  "duration": 7484000,
+  "duration": 1467000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 16000,
+  "duration": 7545000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 18000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 644004000,
+  "duration": 340240000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 83000,
+  "duration": 74000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2813,7 +2802,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:13"
 });
 formatter.result({
-  "duration": 4723000,
+  "duration": 5334000,
   "status": "passed"
 });
 formatter.match({
@@ -2826,7 +2815,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 22350000,
+  "duration": 19889000,
   "status": "passed"
 });
 formatter.match({
@@ -2839,23 +2828,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 109000,
+  "duration": 91000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1416000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:25.500Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:25.500Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:26.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:26.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/artifact/reading.feature:325)\n"
-});
-formatter.after({
-  "duration": 8292000,
+  "duration": 958000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 17000,
+  "duration": 9535000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 24000,
   "status": "passed"
 });
 formatter.uri("api/artifact/updating.feature");
@@ -2867,7 +2855,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 672455000,
+  "duration": 341372000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2902,7 +2890,7 @@ formatter.match({
   "location": "ArtifactSteps.groovy:6"
 });
 formatter.result({
-  "duration": 3618000,
+  "duration": 3895000,
   "status": "passed"
 });
 formatter.match({
@@ -2915,7 +2903,7 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 16696000,
+  "duration": 20071000,
   "status": "passed"
 });
 formatter.match({
@@ -2928,11 +2916,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 112000,
+  "duration": 155000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11001000,
+  "duration": 8418000,
   "status": "passed"
 });
 formatter.uri("api/config.feature");
@@ -2944,7 +2932,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 686073000,
+  "duration": 333246000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2987,10 +2975,10 @@ formatter.match({
       "offset": 40
     }
   ],
-  "location": "HttpSteps.groovy:113"
+  "location": "HttpSteps.groovy:97"
 });
 formatter.result({
-  "duration": 1373000,
+  "duration": 1226000,
   "status": "passed"
 });
 formatter.match({
@@ -3003,7 +2991,7 @@ formatter.match({
   "location": "HttpSteps.groovy:57"
 });
 formatter.result({
-  "duration": 96628000,
+  "duration": 104858000,
   "status": "passed"
 });
 formatter.match({
@@ -3016,22 +3004,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 100000,
+  "duration": 138000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:78"
 });
 formatter.result({
-  "duration": 877000,
+  "duration": 1146000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9364000,
+  "duration": 7176000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 622539000,
+  "duration": 358904000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3076,7 +3064,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 8421000,
+  "duration": 6909000,
   "status": "passed"
 });
 formatter.match({
@@ -3086,10 +3074,10 @@ formatter.match({
       "offset": 40
     }
   ],
-  "location": "HttpSteps.groovy:113"
+  "location": "HttpSteps.groovy:97"
 });
 formatter.result({
-  "duration": 147000,
+  "duration": 107000,
   "status": "passed"
 });
 formatter.match({
@@ -3102,7 +3090,7 @@ formatter.match({
   "location": "HttpSteps.groovy:57"
 });
 formatter.result({
-  "duration": 39104000,
+  "duration": 42914000,
   "status": "passed"
 });
 formatter.match({
@@ -3115,26 +3103,26 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 105000,
+  "duration": 146000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:78"
 });
 formatter.result({
-  "duration": 403000,
+  "duration": 525000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8044000,
+  "duration": 10831000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 632346000,
+  "duration": 354673000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 70000,
+  "duration": 65000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3225,7 +3213,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 24257000,
+  "duration": 21134000,
   "status": "passed"
 });
 formatter.match({
@@ -3246,7 +3234,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 11761000,
+  "duration": 12047000,
   "status": "passed"
 });
 formatter.match({
@@ -3259,7 +3247,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 7711000,
+  "duration": 5256000,
   "status": "passed"
 });
 formatter.match({
@@ -3269,10 +3257,10 @@ formatter.match({
       "offset": 54
     }
   ],
-  "location": "HttpSteps.groovy:117"
+  "location": "HttpSteps.groovy:101"
 });
 formatter.result({
-  "duration": 25360000,
+  "duration": 21410000,
   "status": "passed"
 });
 formatter.match({
@@ -3285,7 +3273,7 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 62289000,
+  "duration": 60794000,
   "status": "passed"
 });
 formatter.match({
@@ -3298,9 +3286,8 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1009402000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:28.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:19:28.000Z\",\"status\":\"STARTED\"}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:28.395Z\"},\"status\":\"STARTED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:19:28.395Z\"}\n\n\tat WebhookSteps$_run_closure5$_closure15.doCall(WebhookSteps.groovy:154)\n\tat ✽.Then the webhook 1 should be invoked with the JSON:(api/config.feature:59)\n"
+  "duration": 1008458000,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -3312,14 +3299,15 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 11055000,
+  "duration": 1005808000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 24000,
+  "duration": 11023000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 25000,
   "status": "passed"
 });
 formatter.uri("api/deployment/reading.feature");
@@ -3331,11 +3319,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 631770000,
+  "duration": 345503000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 62000,
+  "duration": 52000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3381,7 +3369,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 7262000,
+  "duration": 4143000,
   "status": "passed"
 });
 formatter.match({
@@ -3394,7 +3382,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 31316000,
+  "duration": 24913000,
   "status": "passed"
 });
 formatter.match({
@@ -3407,31 +3395,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 112000,
+  "duration": 102000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1484000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:30.187Z\"},\"environment\":\"pre-prod\",\"service\":\"faas\",\"status\":\"STARTED\",\"promotions\":[{\"id\":1,\"promotion\":\"jenkins-smoke\",\"status\":\"STARTED\",\"infoUrl\":null,\"createdAt\":\"2015-04-07T22:19:30.187Z\"}],\"createdAt\":\"2015-04-07T22:19:30.187Z\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:30.000Z\",\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:30.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"status\":\"STARTED\",\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[{\"id\":1,\"createdAt\":\"2015-04-07T22:19:30.000Z\",\"status\":\"STARTED\",\"infoUrl\":null,\"promotion\":\"jenkins-smoke\"}]}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/deployment/reading.feature:13)\n"
-});
-formatter.after({
-  "duration": 8759000,
+  "duration": 1912000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 21000,
+  "duration": 7469000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 27000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 624168000,
+  "duration": 287581000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 651000,
+  "duration": 482000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3477,7 +3464,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 14146000,
+  "duration": 4349000,
   "status": "passed"
 });
 formatter.match({
@@ -3490,7 +3477,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 27753000,
+  "duration": 20434000,
   "status": "passed"
 });
 formatter.match({
@@ -3503,27 +3490,26 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 108000,
+  "duration": 96000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 2091000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:30.863Z\"},\"environment\":\"pre-prod\",\"service\":\"faas\",\"status\":\"STARTED\",\"promotions\":[{\"id\":1,\"promotion\":\"jenkins-smoke\",\"status\":\"STARTED\",\"infoUrl\":null,\"createdAt\":\"2015-04-07T22:19:30.863Z\"}],\"createdAt\":\"2015-04-07T22:19:30.863Z\"}\n       |        false\n       {\"id\":1,\"createdAt\":\"2015-04-07T22:19:31.000Z\",\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:31.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"status\":\"STARTED\",\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[{\"id\":1,\"createdAt\":\"2015-04-07T22:19:31.000Z\",\"status\":\"STARTED\",\"infoUrl\":null,\"promotion\":\"jenkins-smoke\"}]}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/deployment/reading.feature:46)\n"
-});
-formatter.after({
-  "duration": 9253000,
+  "duration": 1126000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 381000,
+  "duration": 9853000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 213000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 640968000,
+  "duration": 286748000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3554,7 +3540,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 16052000,
+  "duration": 18158000,
   "status": "passed"
 });
 formatter.match({
@@ -3567,15 +3553,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 98000,
+  "duration": 157000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9122000,
+  "duration": 9691000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 630413000,
+  "duration": 285043000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3612,7 +3598,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 15634000,
+  "duration": 15162000,
   "status": "passed"
 });
 formatter.match({
@@ -3625,15 +3611,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 130000,
+  "duration": 119000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7981000,
+  "duration": 7243000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 641325000,
+  "duration": 283244000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3685,7 +3671,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 8801000,
+  "duration": 5089000,
   "status": "passed"
 });
 formatter.match({
@@ -3698,7 +3684,7 @@ formatter.match({
   "location": "HttpSteps.groovy:61"
 });
 formatter.result({
-  "duration": 14350000,
+  "duration": 12500000,
   "status": "passed"
 });
 formatter.match({
@@ -3711,19 +3697,19 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 102000,
+  "duration": 87000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7728000,
+  "duration": 7305000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 614512000,
+  "duration": 277012000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 120000,
+  "duration": 99000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3769,7 +3755,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:47"
 });
 formatter.result({
-  "duration": 11798000,
+  "duration": 7101000,
   "status": "passed"
 });
 formatter.match({
@@ -3782,7 +3768,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 23571000,
+  "duration": 23987000,
   "status": "passed"
 });
 formatter.match({
@@ -3795,27 +3781,26 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 113000,
+  "duration": 99000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 2597000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:33.536Z\"},\"environment\":\"pre-prod\",\"service\":\"faas\",\"status\":\"STARTED\",\"promotions\":[{\"id\":1,\"promotion\":\"jenkins-smoke\",\"status\":\"STARTED\",\"infoUrl\":null,\"createdAt\":\"2015-04-07T22:19:33.536Z\"}],\"createdAt\":\"2015-04-07T22:19:33.536Z\"},{\"id\":2,\"artifact\":{\"id\":2,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\",\"createdAt\":\"2015-04-07T22:19:33.536Z\"},\"environment\":\"pre-prod\",\"service\":\"faas\",\"status\":\"STARTED\",\"promotions\":[{\"id\":2,\"promotion\":\"status-check\",\"status\":\"STARTED\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"createdAt\":\"2015-04-07T22:19:33.536Z\"}],\"createdAt\":\"2015-04-07T22:19:33.536Z\"}]\n       |        false\n       [{\"id\":1,\"createdAt\":\"2015-04-07T22:19:34.000Z\",\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:34.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"status\":\"STARTED\",\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[{\"id\":1,\"createdAt\":\"2015-04-07T22:19:34.000Z\",\"status\":\"STARTED\",\"infoUrl\":null,\"promotion\":\"jenkins-smoke\"}]},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:34.000Z\",\"artifact\":{\"id\":2,\"createdAt\":\"2015-04-07T22:19:34.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"},\"status\":\"STARTED\",\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[{\"id\":2,\"createdAt\":\"2015-04-07T22:19:34.000Z\",\"status\":\"STARTED\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"status-check\"}]}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/deployment/reading.feature:120)\n"
-});
-formatter.after({
-  "duration": 7489000,
+  "duration": 1552000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 32000,
+  "duration": 7705000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 46000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 600037000,
+  "duration": 282710000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3852,7 +3837,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 25528000,
+  "duration": 16784000,
   "status": "passed"
 });
 formatter.match({
@@ -3865,15 +3850,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 211000,
+  "duration": 99000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8044000,
+  "duration": 7472000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 592546000,
+  "duration": 286616000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3910,7 +3895,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 18636000,
+  "duration": 14503000,
   "status": "passed"
 });
 formatter.match({
@@ -3923,19 +3908,19 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 101000,
+  "duration": 97000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9006000,
+  "duration": 6132000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 658629000,
+  "duration": 313966000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 49000,
+  "duration": 60000,
   "status": "passed"
 });
 formatter.scenario({
@@ -3981,7 +3966,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 7543000,
+  "duration": 4506000,
   "status": "passed"
 });
 formatter.match({
@@ -3994,7 +3979,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 23995000,
+  "duration": 20990000,
   "status": "passed"
 });
 formatter.match({
@@ -4007,31 +3992,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 113000,
+  "duration": 97000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1572000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:35.569Z\"},\"environment\":\"pre-prod\",\"service\":\"faas\",\"status\":\"STARTED\",\"promotions\":[{\"id\":1,\"promotion\":\"jenkins-smoke\",\"status\":\"STARTED\",\"infoUrl\":null,\"createdAt\":\"2015-04-07T22:19:35.569Z\"}],\"createdAt\":\"2015-04-07T22:19:35.569Z\"}\n       |        false\n       {\"id\":1,\"createdAt\":\"2015-04-07T22:19:36.000Z\",\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:36.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"status\":\"STARTED\",\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[{\"id\":1,\"createdAt\":\"2015-04-07T22:19:36.000Z\",\"status\":\"STARTED\",\"infoUrl\":null,\"promotion\":\"jenkins-smoke\"}]}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/deployment/reading.feature:189)\n"
-});
-formatter.after({
-  "duration": 9574000,
+  "duration": 1129000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 17000,
+  "duration": 8204000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 18000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 639494000,
+  "duration": 269523000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 58000,
+  "duration": 59000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4077,7 +4061,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:47"
 });
 formatter.result({
-  "duration": 12617000,
+  "duration": 5401000,
   "status": "passed"
 });
 formatter.match({
@@ -4090,7 +4074,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 22916000,
+  "duration": 22984000,
   "status": "passed"
 });
 formatter.match({
@@ -4103,19 +4087,18 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 194000,
+  "duration": 104000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 2599000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":2,\"artifact\":{\"id\":2,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\",\"createdAt\":\"2015-04-07T22:19:36.254Z\"},\"environment\":\"pre-prod\",\"service\":\"faas\",\"status\":\"STARTED\",\"promotions\":[{\"id\":2,\"promotion\":\"status-check\",\"status\":\"STARTED\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"createdAt\":\"2015-04-07T22:19:36.254Z\"}],\"createdAt\":\"2015-04-07T22:19:36.254Z\"}\n       |        false\n       {\"id\":2,\"createdAt\":\"2015-04-07T22:19:36.000Z\",\"artifact\":{\"id\":2,\"createdAt\":\"2015-04-07T22:19:36.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"},\"status\":\"STARTED\",\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[{\"id\":2,\"createdAt\":\"2015-04-07T22:19:36.000Z\",\"status\":\"STARTED\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"status-check\"}]}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/deployment/reading.feature:221)\n"
+  "duration": 1018000,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 7930000,
+  "duration": 7180000,
   "status": "passed"
 });
 formatter.after({
@@ -4123,11 +4106,11 @@ formatter.after({
   "status": "passed"
 });
 formatter.before({
-  "duration": 690735000,
+  "duration": 270759000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 59000,
+  "duration": 46000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4173,7 +4156,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:83"
 });
 formatter.result({
-  "duration": 24751000,
+  "duration": 10292000,
   "status": "passed"
 });
 formatter.match({
@@ -4186,7 +4169,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 28279000,
+  "duration": 21385000,
   "status": "passed"
 });
 formatter.match({
@@ -4199,19 +4182,18 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 126000,
+  "duration": 202000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 2446000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  [{\"id\":5,\"artifact\":{\"id\":2,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\",\"createdAt\":\"2015-04-07T22:19:36.995Z\"},\"environment\":\"dev-integ\",\"service\":\"faas\",\"promotions\":[],\"status\":\"STARTED\",\"createdAt\":\"2015-04-07T22:19:36.995Z\"},{\"id\":6,\"artifact\":{\"id\":2,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\",\"createdAt\":\"2015-04-07T22:19:36.995Z\"},\"environment\":\"integ\",\"service\":\"faas\",\"promotions\":[],\"status\":\"STARTED\",\"createdAt\":\"2015-04-07T22:19:36.995Z\"},{\"id\":7,\"artifact\":{\"id\":2,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\",\"createdAt\":\"2015-04-07T22:19:36.995Z\"},\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[],\"status\":\"STARTED\",\"createdAt\":\"2015-04-07T22:19:36.995Z\"},{\"id\":8,\"artifact\":{\"id\":2,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\",\"createdAt\":\"2015-04-07T22:19:36.995Z\"},\"environment\":\"prod\",\"service\":\"faas\",\"promotions\":[],\"status\":\"STARTED\",\"createdAt\":\"2015-04-07T22:19:36.995Z\"}]\n       |        false\n       [{\"id\":5,\"createdAt\":\"2015-04-07T22:19:37.000Z\",\"artifact\":{\"id\":2,\"createdAt\":\"2015-04-07T22:19:37.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"},\"status\":\"STARTED\",\"environment\":\"dev-integ\",\"service\":\"faas\",\"promotions\":[]},{\"id\":6,\"createdAt\":\"2015-04-07T22:19:37.000Z\",\"artifact\":{\"id\":2,\"createdAt\":\"2015-04-07T22:19:37.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"},\"status\":\"STARTED\",\"environment\":\"integ\",\"service\":\"faas\",\"promotions\":[]},{\"id\":7,\"createdAt\":\"2015-04-07T22:19:37.000Z\",\"artifact\":{\"id\":2,\"createdAt\":\"2015-04-07T22:19:37.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"},\"status\":\"STARTED\",\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[]},{\"id\":8,\"createdAt\":\"2015-04-07T22:19:37.000Z\",\"artifact\":{\"id\":2,\"createdAt\":\"2015-04-07T22:19:37.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.2\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.2/cucumber-artifact-1.0.2.jar\"},\"status\":\"STARTED\",\"environment\":\"prod\",\"service\":\"faas\",\"promotions\":[]}]\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/deployment/reading.feature:253)\n"
+  "duration": 1741000,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 11864000,
+  "duration": 7039000,
   "status": "passed"
 });
 formatter.after({
@@ -4219,7 +4201,7 @@ formatter.after({
   "status": "passed"
 });
 formatter.before({
-  "duration": 639537000,
+  "duration": 264600000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4250,7 +4232,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 17632000,
+  "duration": 15128000,
   "status": "passed"
 });
 formatter.match({
@@ -4263,15 +4245,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 104000,
+  "duration": 110000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6863000,
+  "duration": 7563000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 615174000,
+  "duration": 260897000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4307,7 +4289,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:47"
 });
 formatter.result({
-  "duration": 10992000,
+  "duration": 4983000,
   "status": "passed"
 });
 formatter.match({
@@ -4320,7 +4302,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 17707000,
+  "duration": 13873000,
   "status": "passed"
 });
 formatter.match({
@@ -4333,11 +4315,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 206000,
+  "duration": 93000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7344000,
+  "duration": 7751000,
   "status": "passed"
 });
 formatter.uri("api/deployment/updating.feature");
@@ -4349,11 +4331,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 634655000,
+  "duration": 268795000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 44000,
+  "duration": 69000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4404,7 +4386,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 6915000,
+  "duration": 3869000,
   "status": "passed"
 });
 formatter.match({
@@ -4417,7 +4399,7 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 24264000,
+  "duration": 24667000,
   "status": "passed"
 });
 formatter.match({
@@ -4430,31 +4412,30 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 100000,
+  "duration": 84000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1347000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:39.022Z\"},\"environment\":\"pre-prod\",\"service\":\"faas\",\"status\":\"COMPLETED\",\"promotions\":[{\"id\":1,\"promotion\":\"jenkins-smoke\",\"status\":\"STARTED\",\"infoUrl\":null,\"createdAt\":\"2015-04-07T22:19:39.022Z\"}],\"createdAt\":\"2015-04-07T22:19:39.022Z\"}\n       |        false\n       {\"id\":1,\"createdAt\":\"2015-04-07T22:19:39.000Z\",\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:39.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"status\":\"COMPLETED\",\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[{\"id\":1,\"createdAt\":\"2015-04-07T22:19:39.000Z\",\"status\":\"STARTED\",\"infoUrl\":null,\"promotion\":\"jenkins-smoke\"}]}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/deployment/updating.feature:18)\n"
-});
-formatter.after({
-  "duration": 9167000,
+  "duration": 921000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 15000,
+  "duration": 7543000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 13000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 615219000,
+  "duration": 269876000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 59000,
+  "duration": 44000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4505,7 +4486,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 7451000,
+  "duration": 3553000,
   "status": "passed"
 });
 formatter.match({
@@ -4518,7 +4499,7 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 31889000,
+  "duration": 21497000,
   "status": "passed"
 });
 formatter.match({
@@ -4531,19 +4512,18 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 106000,
+  "duration": 98000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1256000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:39.683Z\"},\"environment\":\"pre-prod\",\"service\":\"faas\",\"status\":\"FAILED\",\"promotions\":[{\"id\":1,\"promotion\":\"jenkins-smoke\",\"status\":\"STARTED\",\"infoUrl\":null,\"createdAt\":\"2015-04-07T22:19:39.683Z\"}],\"createdAt\":\"2015-04-07T22:19:39.683Z\"}\n       |        false\n       {\"id\":1,\"createdAt\":\"2015-04-07T22:19:40.000Z\",\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:40.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"status\":\"FAILED\",\"environment\":\"pre-prod\",\"service\":\"faas\",\"promotions\":[{\"id\":1,\"createdAt\":\"2015-04-07T22:19:40.000Z\",\"status\":\"STARTED\",\"infoUrl\":null,\"promotion\":\"jenkins-smoke\"}]}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/deployment/updating.feature:56)\n"
+  "duration": 926000,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 689189000,
+  "duration": 8069000,
   "status": "passed"
 });
 formatter.after({
@@ -4551,7 +4531,7 @@ formatter.after({
   "status": "passed"
 });
 formatter.before({
-  "duration": 592203000,
+  "duration": 262654000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4586,7 +4566,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 7657000,
+  "duration": 4440000,
   "status": "passed"
 });
 formatter.match({
@@ -4599,7 +4579,7 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 19606000,
+  "duration": 15933000,
   "status": "passed"
 });
 formatter.match({
@@ -4612,15 +4592,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 101000,
+  "duration": 96000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8498000,
+  "duration": 8212000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 633038000,
+  "duration": 289194000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4661,7 +4641,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 7935000,
+  "duration": 3721000,
   "status": "passed"
 });
 formatter.match({
@@ -4674,7 +4654,7 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 17055000,
+  "duration": 15637000,
   "status": "passed"
 });
 formatter.match({
@@ -4687,15 +4667,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 316000,
+  "duration": 95000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7784000,
+  "duration": 7993000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 620444000,
+  "duration": 264017000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4737,7 +4717,7 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 16031000,
+  "duration": 16043000,
   "status": "passed"
 });
 formatter.match({
@@ -4750,11 +4730,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 105000,
+  "duration": 100000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7342000,
+  "duration": 7132000,
   "status": "passed"
 });
 formatter.uri("api/environment/reading.feature");
@@ -4766,7 +4746,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 609672000,
+  "duration": 269122000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4817,7 +4797,7 @@ formatter.match({
   "location": "EnvironmentSteps.groovy:7"
 });
 formatter.result({
-  "duration": 7238000,
+  "duration": 7181000,
   "status": "passed"
 });
 formatter.match({
@@ -4830,7 +4810,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 15769000,
+  "duration": 15816000,
   "status": "passed"
 });
 formatter.match({
@@ -4843,22 +4823,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 85000,
+  "duration": 87000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 742000,
+  "duration": 747000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7521000,
+  "duration": 6595000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 596297000,
+  "duration": 266653000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4909,7 +4889,7 @@ formatter.match({
   "location": "EnvironmentSteps.groovy:7"
 });
 formatter.result({
-  "duration": 6321000,
+  "duration": 5895000,
   "status": "passed"
 });
 formatter.match({
@@ -4922,7 +4902,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 14492000,
+  "duration": 14869000,
   "status": "passed"
 });
 formatter.match({
@@ -4935,22 +4915,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 88000,
+  "duration": 84000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 910000,
+  "duration": 705000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7138000,
+  "duration": 6322000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 622660000,
+  "duration": 265795000,
   "status": "passed"
 });
 formatter.scenario({
@@ -4981,7 +4961,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 13165000,
+  "duration": 14117000,
   "status": "passed"
 });
 formatter.match({
@@ -4994,11 +4974,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 99000,
+  "duration": 100000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5849000,
+  "duration": 6993000,
   "status": "passed"
 });
 formatter.uri("api/flow/reading.feature");
@@ -5010,11 +4990,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 581880000,
+  "duration": 266380000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 41000,
+  "duration": 55000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5060,7 +5040,7 @@ formatter.match({
   "location": "FlowSteps.groovy:13"
 });
 formatter.result({
-  "duration": 9349000,
+  "duration": 6647000,
   "status": "passed"
 });
 formatter.match({
@@ -5073,7 +5053,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 23600000,
+  "duration": 20143000,
   "status": "passed"
 });
 formatter.match({
@@ -5086,27 +5066,26 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 236000,
+  "duration": 91000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1958000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":1,\"createdAt\":\"2015-04-07T22:19:44.860Z\",\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:44.860Z\"},\"deployments\":[{\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:44.860Z\"},\"environment\":\"pre-production\",\"service\":\"faas\",\"promotions\":[],\"status\":\"STARTED\",\"createdAt\":\"2015-04-07T22:19:44.860Z\"},{\"id\":2,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:44.860Z\"},\"environment\":\"production\",\"service\":\"faas\",\"promotions\":[],\"status\":\"STARTED\",\"createdAt\":\"2015-04-07T22:19:44.860Z\"}],\"service\":\"faas\"}\n       |        false\n       {\"id\":1,\"createdAt\":\"2015-04-07T22:19:45.000Z\",\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:45.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"deployments\":[{\"id\":1,\"createdAt\":\"2015-04-07T22:19:45.000Z\",\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:45.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"status\":\"STARTED\",\"environment\":\"pre-production\",\"service\":\"faas\",\"promotions\":[]},{\"id\":2,\"createdAt\":\"2015-04-07T22:19:45.000Z\",\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:45.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"status\":\"STARTED\",\"environment\":\"production\",\"service\":\"faas\",\"promotions\":[]}],\"service\":\"faas\"}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/flow/reading.feature:13)\n"
-});
-formatter.after({
-  "duration": 9846000,
+  "duration": 1167000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 15000,
+  "duration": 7559000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 17000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 639363000,
+  "duration": 265802000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5137,7 +5116,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 16205000,
+  "duration": 15228000,
   "status": "passed"
 });
 formatter.match({
@@ -5150,11 +5129,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 108000,
+  "duration": 91000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6784000,
+  "duration": 5713000,
   "status": "passed"
 });
 formatter.uri("api/health.feature");
@@ -5166,7 +5145,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 610425000,
+  "duration": 995597000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5207,7 +5186,7 @@ formatter.match({
   "location": "HttpSteps.groovy:13"
 });
 formatter.result({
-  "duration": 42898000,
+  "duration": 32486000,
   "status": "passed"
 });
 formatter.match({
@@ -5220,18 +5199,18 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 94000,
+  "duration": 110000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 706000,
+  "duration": 797000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6925000,
+  "duration": 7030000,
   "status": "passed"
 });
 formatter.uri("api/pipeline/reading.feature");
@@ -5243,7 +5222,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 702124000,
+  "duration": 254304000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5294,7 +5273,7 @@ formatter.match({
   "location": "PipelineSteps.groovy:7"
 });
 formatter.result({
-  "duration": 10222000,
+  "duration": 6535000,
   "status": "passed"
 });
 formatter.match({
@@ -5307,7 +5286,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 15690000,
+  "duration": 15457000,
   "status": "passed"
 });
 formatter.match({
@@ -5320,22 +5299,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 108000,
+  "duration": 88000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 934000,
+  "duration": 750000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7925000,
+  "duration": 7248000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 644602000,
+  "duration": 260104000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5386,7 +5365,7 @@ formatter.match({
   "location": "PipelineSteps.groovy:7"
 });
 formatter.result({
-  "duration": 11698000,
+  "duration": 5569000,
   "status": "passed"
 });
 formatter.match({
@@ -5399,7 +5378,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 13271000,
+  "duration": 14376000,
   "status": "passed"
 });
 formatter.match({
@@ -5412,22 +5391,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 87000,
+  "duration": 97000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 759000,
+  "duration": 812000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6058000,
+  "duration": 6094000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 610052000,
+  "duration": 253139000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5458,7 +5437,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 13648000,
+  "duration": 13096000,
   "status": "passed"
 });
 formatter.match({
@@ -5471,11 +5450,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 95000,
+  "duration": 130000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7190000,
+  "duration": 7404000,
   "status": "passed"
 });
 formatter.uri("api/promotion/creating.feature");
@@ -5487,11 +5466,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 677046000,
+  "duration": 253552000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 54000,
+  "duration": 43000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5542,7 +5521,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 7771000,
+  "duration": 3800000,
   "status": "passed"
 });
 formatter.match({
@@ -5555,7 +5534,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 37791000,
+  "duration": 31351000,
   "status": "passed"
 });
 formatter.match({
@@ -5568,27 +5547,26 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 87000,
+  "duration": 141000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1044000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":1,\"promotion\":\"jenkins-smoke\",\"status\":\"SUCCESS\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"createdAt\":\"2015-04-07T22:19:48.966Z\"}\n       |        false\n       {\"id\":1,\"createdAt\":\"2015-04-07T22:19:49.000Z\",\"status\":\"SUCCESS\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"jenkins-smoke\"}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/promotion/creating.feature:20)\n"
-});
-formatter.after({
-  "duration": 9808000,
+  "duration": 1012000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18000,
+  "duration": 7053000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 15000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 640058000,
+  "duration": 252352000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5623,7 +5601,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 7679000,
+  "duration": 3570000,
   "status": "passed"
 });
 formatter.match({
@@ -5636,7 +5614,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 24842000,
+  "duration": 17689000,
   "status": "passed"
 });
 formatter.match({
@@ -5649,15 +5627,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 99000,
+  "duration": 91000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7436000,
+  "duration": 8423000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 623002000,
+  "duration": 252689000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5693,7 +5671,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 15308000,
+  "duration": 15666000,
   "status": "passed"
 });
 formatter.match({
@@ -5706,15 +5684,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 115000,
+  "duration": 98000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6751000,
+  "duration": 6739000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 576217000,
+  "duration": 252923000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5756,7 +5734,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 16983000,
+  "duration": 14635000,
   "status": "passed"
 });
 formatter.match({
@@ -5769,11 +5747,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 107000,
+  "duration": 87000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6632000,
+  "duration": 6715000,
   "status": "passed"
 });
 formatter.uri("api/promotion/reading.feature");
@@ -5785,7 +5763,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 612460000,
+  "duration": 306117000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5836,7 +5814,7 @@ formatter.match({
   "location": "PromotionSteps.groovy:8"
 });
 formatter.result({
-  "duration": 5260000,
+  "duration": 4661000,
   "status": "passed"
 });
 formatter.match({
@@ -5849,7 +5827,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 14803000,
+  "duration": 15142000,
   "status": "passed"
 });
 formatter.match({
@@ -5862,22 +5840,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 88000,
+  "duration": 202000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 659000,
+  "duration": 991000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6846000,
+  "duration": 7239000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 645815000,
+  "duration": 253099000,
   "status": "passed"
 });
 formatter.scenario({
@@ -5928,7 +5906,7 @@ formatter.match({
   "location": "PromotionSteps.groovy:8"
 });
 formatter.result({
-  "duration": 65598000,
+  "duration": 4118000,
   "status": "passed"
 });
 formatter.match({
@@ -5941,7 +5919,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 15379000,
+  "duration": 13421000,
   "status": "passed"
 });
 formatter.match({
@@ -5954,22 +5932,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 97000,
+  "duration": 88000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 927000,
+  "duration": 629000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7876000,
+  "duration": 5982000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 615369000,
+  "duration": 246132000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6000,7 +5978,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 12761000,
+  "duration": 12745000,
   "status": "passed"
 });
 formatter.match({
@@ -6013,19 +5991,19 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 98000,
+  "duration": 92000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6982000,
+  "duration": 6944000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 580318000,
+  "duration": 256317000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 58000,
+  "duration": 45000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6071,7 +6049,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 8077000,
+  "duration": 3708000,
   "status": "passed"
 });
 formatter.match({
@@ -6084,7 +6062,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 20570000,
+  "duration": 18788000,
   "status": "passed"
 });
 formatter.match({
@@ -6097,27 +6075,26 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 93000,
+  "duration": 88000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 1008000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert bodyNode \u003d\u003d expectedNode\n       |        |  |\n       |        |  {\"id\":1,\"promotion\":\"jenkins-smoke\",\"status\":\"STARTED\",\"infoUrl\":null,\"createdAt\":\"2015-04-07T22:19:53.557Z\"}\n       |        false\n       {\"id\":1,\"createdAt\":\"2015-04-07T22:19:54.000Z\",\"status\":\"STARTED\",\"infoUrl\":null,\"promotion\":\"jenkins-smoke\"}\n\n\tat HttpSteps$_run_closure12.doCall(HttpSteps.groovy:110)\n\tat ✽.And the body should be JSON:(api/promotion/reading.feature:57)\n"
-});
-formatter.after({
-  "duration": 9275000,
+  "duration": 668000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 28000,
+  "duration": 6850000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 18000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 688675000,
+  "duration": 250780000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6148,7 +6125,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 14593000,
+  "duration": 12917000,
   "status": "passed"
 });
 formatter.match({
@@ -6161,15 +6138,15 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 97000,
+  "duration": 89000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7522000,
+  "duration": 6600000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 718977000,
+  "duration": 248092000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6205,7 +6182,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:14"
 });
 formatter.result({
-  "duration": 8335000,
+  "duration": 3589000,
   "status": "passed"
 });
 formatter.match({
@@ -6218,7 +6195,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 21160000,
+  "duration": 14682000,
   "status": "passed"
 });
 formatter.match({
@@ -6231,11 +6208,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 111000,
+  "duration": 78000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8553000,
+  "duration": 6423000,
   "status": "passed"
 });
 formatter.uri("api/service/reading.feature");
@@ -6247,7 +6224,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 676479000,
+  "duration": 242931000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6298,7 +6275,7 @@ formatter.match({
   "location": "ServiceSteps.groovy:7"
 });
 formatter.result({
-  "duration": 12106000,
+  "duration": 5758000,
   "status": "passed"
 });
 formatter.match({
@@ -6311,7 +6288,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 14734000,
+  "duration": 14406000,
   "status": "passed"
 });
 formatter.match({
@@ -6324,22 +6301,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 140000,
+  "duration": 87000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 2042000,
+  "duration": 937000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8154000,
+  "duration": 6929000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 675468000,
+  "duration": 279701000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6390,7 +6367,7 @@ formatter.match({
   "location": "ServiceSteps.groovy:7"
 });
 formatter.result({
-  "duration": 5873000,
+  "duration": 5649000,
   "status": "passed"
 });
 formatter.match({
@@ -6403,7 +6380,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 14280000,
+  "duration": 13498000,
   "status": "passed"
 });
 formatter.match({
@@ -6416,22 +6393,22 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 81000,
+  "duration": 91000,
   "status": "passed"
 });
 formatter.match({
   "location": "HttpSteps.groovy:83"
 });
 formatter.result({
-  "duration": 757000,
+  "duration": 708000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9097000,
+  "duration": 7164000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 640263000,
+  "duration": 246530000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6462,7 +6439,7 @@ formatter.match({
   "location": "HttpSteps.groovy:17"
 });
 formatter.result({
-  "duration": 13138000,
+  "duration": 12222000,
   "status": "passed"
 });
 formatter.match({
@@ -6475,11 +6452,11 @@ formatter.match({
   "location": "HttpSteps.groovy:74"
 });
 formatter.result({
-  "duration": 91000,
+  "duration": 89000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6761000,
+  "duration": 6891000,
   "status": "passed"
 });
 formatter.uri("api/webhook/deploymentCompleted.feature");
@@ -6491,11 +6468,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 600504000,
+  "duration": 243665000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 43000,
+  "duration": 70000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6565,7 +6542,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 12351000,
+  "duration": 9805000,
   "status": "passed"
 });
 formatter.match({
@@ -6578,7 +6555,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 5126000,
+  "duration": 2842000,
   "status": "passed"
 });
 formatter.match({
@@ -6591,19 +6568,18 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 25611000,
+  "duration": 23674000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1005012000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:58.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:19:58.000Z\",\"status\":\"COMPLETED\"}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:57.760Z\"},\"status\":\"COMPLETED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:19:57.760Z\"}\n\n\tat WebhookSteps$_run_closure4$_closure14.doCall(WebhookSteps.groovy:135)\n\tat ✽.Then the webhook should be invoked with the JSON:(api/webhook/deploymentCompleted.feature:18)\n"
+  "duration": 1008263000,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 9308000,
+  "duration": 8566000,
   "status": "passed"
 });
 formatter.after({
@@ -6611,11 +6587,11 @@ formatter.after({
   "status": "passed"
 });
 formatter.before({
-  "duration": 655579000,
+  "duration": 246831000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 45000,
+  "duration": 75000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6710,7 +6686,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 8213000,
+  "duration": 7295000,
   "status": "passed"
 });
 formatter.match({
@@ -6723,7 +6699,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 5734000,
+  "duration": 2509000,
   "status": "passed"
 });
 formatter.match({
@@ -6736,29 +6712,29 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 25507000,
+  "duration": 20524000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1006108000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:19:59.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:19:59.000Z\",\"status\":\"COMPLETED\"}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:19:59.476Z\"},\"status\":\"COMPLETED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:19:59.476Z\"}\n\n\tat WebhookSteps$_run_closure4$_closure14.doCall(WebhookSteps.groovy:135)\n\tat ✽.Then the webhook should be invoked with the JSON:(api/webhook/deploymentCompleted.feature:55)\n"
+  "duration": 1002739000,
+  "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:158"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 9412000,
+  "duration": 4735000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 17000,
+  "duration": 8413000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 19000,
   "status": "passed"
 });
 formatter.uri("api/webhook/deploymentCreated.feature");
@@ -6770,11 +6746,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 577383000,
+  "duration": 258798000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 46000,
+  "duration": 44000,
   "status": "passed"
 });
 formatter.scenario({
@@ -6875,35 +6851,35 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 13403000,
+  "duration": 10960000,
   "status": "passed"
 });
 formatter.match({
   "location": "PromotionSteps.groovy:24"
 });
 formatter.result({
-  "duration": 495000,
+  "duration": 505000,
   "status": "passed"
 });
 formatter.match({
   "location": "EnvironmentSteps.groovy:16"
 });
 formatter.result({
-  "duration": 142000,
+  "duration": 182000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 152000,
+  "duration": 157000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 142000,
+  "duration": 146000,
   "status": "passed"
 });
 formatter.match({
@@ -6916,37 +6892,37 @@ formatter.match({
   "location": "WebhookSteps.groovy:109"
 });
 formatter.result({
-  "duration": 28589000,
+  "duration": 27072000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1004107000,
+  "duration": 1004674000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:158"
 });
 formatter.result({
-  "duration": 5716000,
+  "duration": 227000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9198000,
+  "duration": 8474000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18000,
+  "duration": 17000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 614422000,
+  "duration": 252356000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 46000,
+  "duration": 45000,
   "status": "passed"
 });
 formatter.scenario({
@@ -7025,28 +7001,28 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 7898000,
+  "duration": 7209000,
   "status": "passed"
 });
 formatter.match({
   "location": "PromotionSteps.groovy:24"
 });
 formatter.result({
-  "duration": 209000,
+  "duration": 225000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 154000,
+  "duration": 167000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 133000,
+  "duration": 123000,
   "status": "passed"
 });
 formatter.match({
@@ -7059,22 +7035,22 @@ formatter.match({
   "location": "WebhookSteps.groovy:109"
 });
 formatter.result({
-  "duration": 30168000,
+  "duration": 22556000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1004558000,
+  "duration": 1006309000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8983000,
+  "duration": 7946000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 17000,
+  "duration": 18000,
   "status": "passed"
 });
 formatter.uri("api/webhook/deploymentStarted.feature");
@@ -7086,11 +7062,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 594488000,
+  "duration": 291791000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 45000,
+  "duration": 42000,
   "status": "passed"
 });
 formatter.scenario({
@@ -7181,7 +7157,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 11585000,
+  "duration": 11192000,
   "status": "passed"
 });
 formatter.match({
@@ -7194,7 +7170,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 5497000,
+  "duration": 2751000,
   "status": "passed"
 });
 formatter.match({
@@ -7207,37 +7183,37 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 28662000,
+  "duration": 21335000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1006748000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:04.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:04.000Z\",\"status\":\"STARTED\"}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:04.445Z\"},\"status\":\"STARTED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:04.445Z\"}\n\n\tat WebhookSteps$_run_closure4$_closure14.doCall(WebhookSteps.groovy:135)\n\tat ✽.Then the webhook should be invoked with the JSON:(api/webhook/deploymentStarted.feature:18)\n"
+  "duration": 1003133000,
+  "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:158"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 9547000,
+  "duration": 201000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18000,
+  "duration": 8680000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 19000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 560227000,
+  "duration": 249347000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 54000,
+  "duration": 48000,
   "status": "passed"
 });
 formatter.scenario({
@@ -7311,7 +7287,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 7889000,
+  "duration": 6742000,
   "status": "passed"
 });
 formatter.match({
@@ -7324,7 +7300,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 5979000,
+  "duration": 3228000,
   "status": "passed"
 });
 formatter.match({
@@ -7337,23 +7313,22 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 27976000,
+  "duration": 25393000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1005222000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:06.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:06.000Z\",\"status\":\"STARTED\"}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:06.071Z\"},\"status\":\"STARTED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:06.071Z\"}\n\n\tat WebhookSteps$_run_closure4$_closure14.doCall(WebhookSteps.groovy:135)\n\tat ✽.Then the webhook should be invoked with the JSON:(api/webhook/deploymentStarted.feature:57)\n"
-});
-formatter.after({
-  "duration": 6771000,
+  "duration": 1003202000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 14000,
+  "duration": 8374000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 18000,
   "status": "passed"
 });
 formatter.uri("api/webhook/multipleWebhooks.feature");
@@ -7365,11 +7340,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 578056000,
+  "duration": 250566000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 68000,
+  "duration": 45000,
   "status": "passed"
 });
 formatter.scenario({
@@ -7459,35 +7434,35 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 11080000,
+  "duration": 9965000,
   "status": "passed"
 });
 formatter.match({
   "location": "PromotionSteps.groovy:24"
 });
 formatter.result({
-  "duration": 276000,
+  "duration": 256000,
   "status": "passed"
 });
 formatter.match({
   "location": "EnvironmentSteps.groovy:16"
 });
 formatter.result({
-  "duration": 463000,
+  "duration": 423000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 211000,
+  "duration": 188000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 138000,
+  "duration": 161000,
   "status": "passed"
 });
 formatter.match({
@@ -7500,7 +7475,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:109"
 });
 formatter.result({
-  "duration": 26943000,
+  "duration": 25524000,
   "status": "passed"
 });
 formatter.match({
@@ -7513,7 +7488,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1005859000,
+  "duration": 1003971000,
   "status": "passed"
 });
 formatter.match({
@@ -7526,23 +7501,23 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1001436000,
+  "duration": 1004728000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9939000,
+  "duration": 9206000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 23000,
+  "duration": 17000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 597260000,
+  "duration": 241365000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 58000,
+  "duration": 44000,
   "status": "passed"
 });
 formatter.scenario({
@@ -7631,28 +7606,28 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 8819000,
+  "duration": 6871000,
   "status": "passed"
 });
 formatter.match({
   "location": "PromotionSteps.groovy:24"
 });
 formatter.result({
-  "duration": 362000,
+  "duration": 201000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 419000,
+  "duration": 351000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 150000,
+  "duration": 130000,
   "status": "passed"
 });
 formatter.match({
@@ -7665,7 +7640,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:109"
 });
 formatter.result({
-  "duration": 30709000,
+  "duration": 26055000,
   "status": "passed"
 });
 formatter.match({
@@ -7678,7 +7653,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1001287000,
+  "duration": 1004287000,
   "status": "passed"
 });
 formatter.match({
@@ -7691,23 +7666,23 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1005846000,
+  "duration": 1004275000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 10122000,
+  "duration": 8736000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 20000,
+  "duration": 15000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 645563000,
+  "duration": 237703000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 43000,
+  "duration": 47000,
   "status": "passed"
 });
 formatter.scenario({
@@ -7802,7 +7777,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 10466000,
+  "duration": 9993000,
   "status": "passed"
 });
 formatter.match({
@@ -7823,28 +7798,28 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 5860000,
+  "duration": 5019000,
   "status": "passed"
 });
 formatter.match({
   "location": "PromotionSteps.groovy:24"
 });
 formatter.result({
-  "duration": 219000,
+  "duration": 166000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 160000,
+  "duration": 153000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 121000,
+  "duration": 154000,
   "status": "passed"
 });
 formatter.match({
@@ -7857,7 +7832,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:109"
 });
 formatter.result({
-  "duration": 29888000,
+  "duration": 23331000,
   "status": "passed"
 });
 formatter.match({
@@ -7870,7 +7845,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1002306000,
+  "duration": 1005256000,
   "status": "passed"
 });
 formatter.match({
@@ -7883,11 +7858,11 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1006361000,
+  "duration": 1003154000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9623000,
+  "duration": 8693000,
   "status": "passed"
 });
 formatter.after({
@@ -7895,11 +7870,11 @@ formatter.after({
   "status": "passed"
 });
 formatter.before({
-  "duration": 632597000,
+  "duration": 293169000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 65000,
+  "duration": 86000,
   "status": "passed"
 });
 formatter.scenario({
@@ -7989,7 +7964,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 10612000,
+  "duration": 10167000,
   "status": "passed"
 });
 formatter.match({
@@ -8010,7 +7985,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 6558000,
+  "duration": 5808000,
   "status": "passed"
 });
 formatter.match({
@@ -8023,7 +7998,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 5306000,
+  "duration": 2447000,
   "status": "passed"
 });
 formatter.match({
@@ -8036,7 +8011,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 26633000,
+  "duration": 23620000,
   "status": "passed"
 });
 formatter.match({
@@ -8049,9 +8024,8 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1005204000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:16.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:16.000Z\",\"status\":\"VERIFIED\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:16.000Z\",\"status\":\"SUCCESS\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"jenkins-smoke\"}}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:15.777Z\"},\"status\":\"VERIFIED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:15.777Z\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:15.777Z\",\"promotion\":\"jenkins-smoke\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"status\":\"SUCCESS\"}}\n\n\tat WebhookSteps$_run_closure5$_closure15.doCall(WebhookSteps.groovy:154)\n\tat ✽.Then the webhook 1 should be invoked with the JSON:(api/webhook/multipleWebhooks.feature:190)\n"
+  "duration": 1005485000,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -8063,10 +8037,11 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1002206000,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 9798000,
+  "duration": 8728000,
   "status": "passed"
 });
 formatter.after({
@@ -8074,11 +8049,11 @@ formatter.after({
   "status": "passed"
 });
 formatter.before({
-  "duration": 605847000,
+  "duration": 240505000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 51000,
+  "duration": 44000,
   "status": "passed"
 });
 formatter.scenario({
@@ -8163,7 +8138,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 11802000,
+  "duration": 10020000,
   "status": "passed"
 });
 formatter.match({
@@ -8184,28 +8159,28 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 10661000,
+  "duration": 8215000,
   "status": "passed"
 });
 formatter.match({
   "location": "PromotionSteps.groovy:24"
 });
 formatter.result({
-  "duration": 584000,
+  "duration": 403000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 171000,
+  "duration": 150000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 146000,
+  "duration": 124000,
   "status": "passed"
 });
 formatter.match({
@@ -8218,7 +8193,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:109"
 });
 formatter.result({
-  "duration": 25313000,
+  "duration": 21152000,
   "status": "passed"
 });
 formatter.match({
@@ -8231,23 +8206,23 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1002968000,
+  "duration": 1006053000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7763000,
+  "duration": 8464000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 15000,
+  "duration": 16000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 567979000,
+  "duration": 245393000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 43000,
+  "duration": 51000,
   "status": "passed"
 });
 formatter.scenario({
@@ -8342,7 +8317,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 11014000,
+  "duration": 10938000,
   "status": "passed"
 });
 formatter.match({
@@ -8363,28 +8338,28 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 6513000,
+  "duration": 5369000,
   "status": "passed"
 });
 formatter.match({
   "location": "PromotionSteps.groovy:24"
 });
 formatter.result({
-  "duration": 190000,
+  "duration": 182000,
   "status": "passed"
 });
 formatter.match({
   "location": "PipelineSteps.groovy:17"
 });
 formatter.result({
-  "duration": 141000,
+  "duration": 155000,
   "status": "passed"
 });
 formatter.match({
   "location": "ServiceSteps.groovy:16"
 });
 formatter.result({
-  "duration": 121000,
+  "duration": 119000,
   "status": "passed"
 });
 formatter.match({
@@ -8397,7 +8372,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:109"
 });
 formatter.result({
-  "duration": 26859000,
+  "duration": 21419000,
   "status": "passed"
 });
 formatter.match({
@@ -8410,7 +8385,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1002797000,
+  "duration": 1003876000,
   "status": "passed"
 });
 formatter.match({
@@ -8423,23 +8398,23 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1005767000,
+  "duration": 1004752000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7714000,
+  "duration": 9037000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 15000,
+  "duration": 19000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 602442000,
+  "duration": 238665000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 51000,
+  "duration": 42000,
   "status": "passed"
 });
 formatter.scenario({
@@ -8529,7 +8504,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 10672000,
+  "duration": 12845000,
   "status": "passed"
 });
 formatter.match({
@@ -8550,7 +8525,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 6199000,
+  "duration": 5654000,
   "status": "passed"
 });
 formatter.match({
@@ -8563,7 +8538,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 5685000,
+  "duration": 2399000,
   "status": "passed"
 });
 formatter.match({
@@ -8576,7 +8551,7 @@ formatter.match({
   "location": "HttpSteps.groovy:49"
 });
 formatter.result({
-  "duration": 24183000,
+  "duration": 22196000,
   "status": "passed"
 });
 formatter.match({
@@ -8589,9 +8564,8 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1002833000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:22.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:22.000Z\",\"status\":\"STARTED\"}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:21.754Z\"},\"status\":\"STARTED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:21.754Z\"}\n\n\tat WebhookSteps$_run_closure5$_closure15.doCall(WebhookSteps.groovy:154)\n\tat ✽.Then the webhook 1 should be invoked with the JSON:(api/webhook/multipleWebhooks.feature:379)\n"
+  "duration": 1003353000,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -8603,22 +8577,23 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 7246000,
+  "duration": 1003824000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 16000,
+  "duration": 8132000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 19000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 581247000,
+  "duration": 243938000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 55000,
+  "duration": 53000,
   "status": "passed"
 });
 formatter.scenario({
@@ -8708,7 +8683,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 15745000,
+  "duration": 10610000,
   "status": "passed"
 });
 formatter.match({
@@ -8729,7 +8704,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 7296000,
+  "duration": 6048000,
   "status": "passed"
 });
 formatter.match({
@@ -8742,7 +8717,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 6495000,
+  "duration": 2308000,
   "status": "passed"
 });
 formatter.match({
@@ -8755,7 +8730,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 32159000,
+  "duration": 22078000,
   "status": "passed"
 });
 formatter.match({
@@ -8768,9 +8743,8 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1006641000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:23.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:23.000Z\",\"status\":\"VERIFIED\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:23.000Z\",\"status\":\"SUCCESS\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"jenkins-smoke\"}}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:23.396Z\"},\"status\":\"VERIFIED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:23.396Z\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:23.396Z\",\"promotion\":\"jenkins-smoke\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"status\":\"SUCCESS\"}}\n\n\tat WebhookSteps$_run_closure5$_closure15.doCall(WebhookSteps.groovy:154)\n\tat ✽.Then the webhook 1 should be invoked with the JSON:(api/webhook/multipleWebhooks.feature:438)\n"
+  "duration": 1003362000,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -8782,22 +8756,23 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 9632000,
+  "duration": 1005397000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 16000,
+  "duration": 8518000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 18000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 605537000,
+  "duration": 277406000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 68000,
+  "duration": 44000,
   "status": "passed"
 });
 formatter.scenario({
@@ -8887,7 +8862,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 12286000,
+  "duration": 9981000,
   "status": "passed"
 });
 formatter.match({
@@ -8908,7 +8883,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 7395000,
+  "duration": 4778000,
   "status": "passed"
 });
 formatter.match({
@@ -8921,7 +8896,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 5142000,
+  "duration": 2212000,
   "status": "passed"
 });
 formatter.match({
@@ -8934,7 +8909,7 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 30437000,
+  "duration": 23347000,
   "status": "passed"
 });
 formatter.match({
@@ -8947,9 +8922,8 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "duration": 1003306000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:25.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:25.000Z\",\"status\":\"VERIFIED\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:25.000Z\",\"status\":\"SUCCESS\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"jenkins-smoke\"}}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:25.085Z\"},\"status\":\"VERIFIED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:25.085Z\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:25.085Z\",\"promotion\":\"jenkins-smoke\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"status\":\"SUCCESS\"}}\n\n\tat WebhookSteps$_run_closure5$_closure15.doCall(WebhookSteps.groovy:154)\n\tat ✽.Then the webhook 1 should be invoked with the JSON:(api/webhook/multipleWebhooks.feature:518)\n"
+  "duration": 1002664000,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -8961,14 +8935,15 @@ formatter.match({
   "location": "WebhookSteps.groovy:139"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 9527000,
+  "duration": 1003466000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18000,
+  "duration": 9060000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 17000,
   "status": "passed"
 });
 formatter.uri("api/webhook/promotionCompletedFail.feature");
@@ -8980,11 +8955,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 590321000,
+  "duration": 243959000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 49000,
+  "duration": 45000,
   "status": "passed"
 });
 formatter.scenario({
@@ -9075,7 +9050,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 13174000,
+  "duration": 9572000,
   "status": "passed"
 });
 formatter.match({
@@ -9088,7 +9063,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 6543000,
+  "duration": 2539000,
   "status": "passed"
 });
 formatter.match({
@@ -9101,37 +9076,37 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 25497000,
+  "duration": 21166000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1001991000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:27.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:27.000Z\",\"status\":\"VERIFIED\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:27.000Z\",\"status\":\"FAILED\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"jenkins-smoke\"}}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:26.750Z\"},\"status\":\"VERIFIED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:26.750Z\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:26.750Z\",\"promotion\":\"jenkins-smoke\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"status\":\"FAILED\"}}\n\n\tat WebhookSteps$_run_closure4$_closure14.doCall(WebhookSteps.groovy:135)\n\tat ✽.Then the webhook should be invoked with the JSON:(api/webhook/promotionCompletedFail.feature:20)\n"
+  "duration": 1004614000,
+  "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:158"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 9382000,
+  "duration": 193000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 21000,
+  "duration": 9939000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 17000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 570753000,
+  "duration": 239426000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 55000,
+  "duration": 45000,
   "status": "passed"
 });
 formatter.scenario({
@@ -9205,7 +9180,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 7946000,
+  "duration": 7383000,
   "status": "passed"
 });
 formatter.match({
@@ -9218,7 +9193,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 6301000,
+  "duration": 2541000,
   "status": "passed"
 });
 formatter.match({
@@ -9231,23 +9206,22 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 30736000,
+  "duration": 20756000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1001895000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:28.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:28.000Z\",\"status\":\"VERIFIED\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:28.000Z\",\"status\":\"FAILED\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"jenkins-smoke\"}}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:28.381Z\"},\"status\":\"VERIFIED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:28.381Z\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:28.381Z\",\"promotion\":\"jenkins-smoke\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"status\":\"FAILED\"}}\n\n\tat WebhookSteps$_run_closure4$_closure14.doCall(WebhookSteps.groovy:135)\n\tat ✽.Then the webhook should be invoked with the JSON:(api/webhook/promotionCompletedFail.feature:69)\n"
-});
-formatter.after({
-  "duration": 9710000,
+  "duration": 1001896000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 14000,
+  "duration": 9505000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 17000,
   "status": "passed"
 });
 formatter.uri("api/webhook/promotionCompletedSuccess.feature");
@@ -9259,11 +9233,11 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 600246000,
+  "duration": 234470000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 50000,
+  "duration": 53000,
   "status": "passed"
 });
 formatter.scenario({
@@ -9354,7 +9328,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:19"
 });
 formatter.result({
-  "duration": 13261000,
+  "duration": 9241000,
   "status": "passed"
 });
 formatter.match({
@@ -9367,7 +9341,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 5580000,
+  "duration": 2387000,
   "status": "passed"
 });
 formatter.match({
@@ -9380,37 +9354,37 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 94090000,
+  "duration": 19733000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1001718000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:30.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:30.000Z\",\"status\":\"VERIFIED\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:30.000Z\",\"status\":\"SUCCESS\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"jenkins-smoke\"}}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:30.043Z\"},\"status\":\"VERIFIED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:30.043Z\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:30.043Z\",\"promotion\":\"jenkins-smoke\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"status\":\"SUCCESS\"}}\n\n\tat WebhookSteps$_run_closure4$_closure14.doCall(WebhookSteps.groovy:135)\n\tat ✽.Then the webhook should be invoked with the JSON:(api/webhook/promotionCompletedSuccess.feature:20)\n"
+  "duration": 1006242000,
+  "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:158"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 7551000,
+  "duration": 163000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 14000,
+  "duration": 8427000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 15000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 603443000,
+  "duration": 238005000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 56000,
+  "duration": 51000,
   "status": "passed"
 });
 formatter.scenario({
@@ -9484,7 +9458,7 @@ formatter.match({
   "location": "WebhookSteps.groovy:60"
 });
 formatter.result({
-  "duration": 9578000,
+  "duration": 6756000,
   "status": "passed"
 });
 formatter.match({
@@ -9497,7 +9471,7 @@ formatter.match({
   "location": "DeploymentSteps.groovy:111"
 });
 formatter.result({
-  "duration": 5535000,
+  "duration": 3311000,
   "status": "passed"
 });
 formatter.match({
@@ -9510,23 +9484,22 @@ formatter.match({
   "location": "HttpSteps.groovy:25"
 });
 formatter.result({
-  "duration": 31074000,
+  "duration": 26655000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebhookSteps.groovy:120"
 });
 formatter.result({
-  "duration": 1001238000,
-  "status": "failed",
-  "error_message": "Assertion failed: \n\nassert expectedNode \u003d\u003d requestNode\n       |            |  |\n       |            |  {\"id\":1,\"artifact\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:32.000Z\",\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\"},\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:32.000Z\",\"status\":\"VERIFIED\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:32.000Z\",\"status\":\"SUCCESS\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"promotion\":\"jenkins-smoke\"}}\n       |            false\n       {\"id\":1,\"artifact\":{\"id\":1,\"group\":\"com.example.cucumber\",\"name\":\"cucumber-artifact\",\"version\":\"1.0.1\",\"sourceUrl\":\"http://example.com/maven/com.example.cucumber/cucumber-artifact/1.0.1/cucumber-artifact-1.0.1.jar\",\"createdAt\":\"2015-04-07T22:20:31.773Z\"},\"status\":\"VERIFIED\",\"service\":\"faas\",\"environment\":\"pre-prod\",\"createdAt\":\"2015-04-07T22:20:31.773Z\",\"promotionResult\":{\"id\":1,\"createdAt\":\"2015-04-07T22:20:31.773Z\",\"promotion\":\"jenkins-smoke\",\"infoUrl\":\"http://local.lookout.com/jenkins/job-id/2/results\",\"status\":\"SUCCESS\"}}\n\n\tat WebhookSteps$_run_closure4$_closure14.doCall(WebhookSteps.groovy:135)\n\tat ✽.Then the webhook should be invoked with the JSON:(api/webhook/promotionCompletedSuccess.feature:69)\n"
-});
-formatter.after({
-  "duration": 8286000,
+  "duration": 1006488000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 13000,
+  "duration": 9588000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 19000,
   "status": "passed"
 });
 });
