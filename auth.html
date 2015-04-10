@@ -506,52 +506,21 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_types_of_rest_api_authentication">Types of REST API Authentication:</a>
-<ul class="sectlevel2">
-<li><a href="#_no_authentication">No Authentication</a></li>
 <li><a href="#_basic_authentication_for_administrator">Basic Authentication for Administrator</a></li>
-<li><a href="#_basic_authentication">Basic Authentication</a></li>
 <li><a href="#_ldap_authentication">LDAP Authentication</a></li>
-<li><a href="#_credentials_for_outbound_rest_calls">Credentials for outbound REST calls</a></li>
-</ul>
-</li>
 <li><a href="#_security">Security</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_types_of_rest_api_authentication"><a class="anchor" href="#_types_of_rest_api_authentication"></a>Types of REST API Authentication:</h2>
+<h2 id="_basic_authentication_for_administrator"><a class="anchor" href="#_basic_authentication_for_administrator"></a>Basic Authentication for Administrator</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_no_authentication"><a class="anchor" href="#_no_authentication"></a>No Authentication</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Authentication is NOT performed for the REST APIs</p>
-</li>
-<li>
-<p>The credentials passed with the REST API are ignored</p>
-</li>
-<li>
-<p>This is a default setting</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">deploydb.launch.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">authentication</span>:
-  <span class="key">type</span>: <span class="string"><span class="content">none</span></span></code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_basic_authentication_for_administrator"><a class="anchor" href="#_basic_authentication_for_administrator"></a>Basic Authentication for Administrator</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>This can be only enabled for REST APIs over the admin port</p>
+<p>Following configuration enables basic authentication for REST APIs available
+over the admin port.</p>
 </li>
 </ul>
 </div>
@@ -564,87 +533,41 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_basic_authentication"><a class="anchor" href="#_basic_authentication"></a>Basic Authentication</h3>
+</div>
+<div class="sect1">
+<h2 id="_ldap_authentication"><a class="anchor" href="#_ldap_authentication"></a>LDAP Authentication</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>This can be enabled for Admin and/or User level REST APIs</p>
+<p>LDAP Authentication can be enabled on REST APIs using following
+<a href="https://github.com/yammer/dropwizard-auth-ldap/blob/master/README.md#configuration">configuration</a></p>
+</li>
+<li>
+<p>The cache-policy should be configured to improve application&#8217;s performance.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="title">deploydb.launch.yml</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="error">authentication</span>
-  <span class="key">type</span>: <span class="string"><span class="content">basic</span></span>
-  <span class="key">admin</span>:
-    <span class="key">admin_user1</span> : <span class="string"><span class="content">admin_password1</span></span>
-    <span class="key">admin_user2</span> : <span class="string"><span class="content">admin_password2</span></span>
-  <span class="key">user</span>:
-    <span class="key">user1</span> : <span class="string"><span class="content">password1</span></span>
-    <span class="key">user2</span> : <span class="string"><span class="content">password2</span></span></code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ldap_authentication"><a class="anchor" href="#_ldap_authentication"></a>LDAP Authentication</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>This is configured in conjunction with
-<a href="https://github.com/yammer/dropwizard-auth-ldap/blob/master/README.md#configuration">ldap configuration</a></p>
-</li>
-<li>
-<p>The adminGroupName can be provided to validate the user against it.</p>
-</li>
-<li>
-<p>The cache-policy should be configured to improve our application&#8217;s performance.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">deploydb.launch.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="error">authentication</span>
-  <span class="key">type</span>: <span class="string"><span class="content">ldap</span></span>
-  <span class="key">adminGroupName</span>: <span class="string"><span class="content">adminGroupLevel</span></span>
-
-  <span class="key">ldap</span>:
-    <span class="key">uri</span>: <span class="string"><span class="content">ldaps://myldap.com:636</span></span>
-    <span class="comment"># Cache 10000 credentials for at least 10 minutes</span>
-    <span class="key">cachePolicy</span>: <span class="string"><span class="content">maximumSize=10000, expireAfterWrite=10m</span></span>
-    <span class="key">userFilter</span>: <span class="string"><span class="content">ou=people,dc=yourcompany,dc=com</span></span>
-    <span class="key">groupFilter</span>: <span class="string"><span class="content">ou=groups,dc=yourcompany,dc=com</span></span>
-    <span class="key">userNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
-    <span class="key">groupNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
-    <span class="key">groupMembershipAttribute</span>: <span class="string"><span class="content">memberUid</span></span>
-    <span class="key">groupClassName</span>: <span class="string"><span class="content">posixGroup</span></span>
-    <span class="key">restrictToGroups</span>:
-        - <span class="string"><span class="content">user</span></span>
-        - <span class="string"><span class="content">admin</span></span>
-        - <span class="string"><span class="content">bots</span></span>
-    <span class="key">connectTimeout</span>: <span class="string"><span class="content">500ms</span></span>
-    <span class="key">readTimeout</span>: <span class="string"><span class="content">500ms</span></span></code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_credentials_for_outbound_rest_calls"><a class="anchor" href="#_credentials_for_outbound_rest_calls"></a>Credentials for outbound REST calls</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>These credentials are used for all the REST calls initiated by DeployDB.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">deploydb.launch.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">authentication</span>:
-  <span class="key">outbound</span>:
-    <span class="key">username1</span> : <span class="string"><span class="content">password1</span></span></code></pre>
-</div>
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">ldap</span>:
+  <span class="key">uri</span>: <span class="string"><span class="content">ldaps://myldap.com:636</span></span>
+  <span class="comment"># Cache 10000 credentials for at least 10 minutes</span>
+  <span class="key">cachePolicy</span>: <span class="string"><span class="content">maximumSize=10000, expireAfterWrite=10m</span></span>
+  <span class="key">userFilter</span>: <span class="string"><span class="content">ou=people,dc=yourcompany,dc=com</span></span>
+  <span class="key">groupFilter</span>: <span class="string"><span class="content">ou=groups,dc=yourcompany,dc=com</span></span>
+  <span class="key">userNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
+  <span class="key">groupNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
+  <span class="key">groupMembershipAttribute</span>: <span class="string"><span class="content">memberUid</span></span>
+  <span class="key">groupClassName</span>: <span class="string"><span class="content">posixGroup</span></span>
+  <span class="comment"># Restrict groups to the following</span>
+  <span class="key">restrictToGroups</span>:
+    - <span class="string"><span class="content">user</span></span>
+    - <span class="string"><span class="content">admin</span></span>
+    - <span class="string"><span class="content">bots</span></span>
+  <span class="key">connectTimeout</span>: <span class="string"><span class="content">500ms</span></span>
+  <span class="key">readTimeout</span>: <span class="string"><span class="content">500ms</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -668,7 +591,7 @@ in the launch config for end-to-end security</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-04-08 10:28:37 EDT
+Last updated 2015-04-10 09:03:44 EDT
 </div>
 </div>
 </body>
