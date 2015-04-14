@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0">
-<title>#DeployDB</title>
+<title>#DeployDB Authentication</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -502,286 +502,96 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-<h1>#DeployDB</h1>
+<h1>#DeployDB Authentication</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_important_links">Important Links</a>
-<ul class="sectlevel2">
-<li><a href="#_internals_hacking">Internals/Hacking</a></li>
-</ul>
-</li>
-<li><a href="#_the_problem">The Problem</a></li>
-<li><a href="#_the_solution">The Solution</a></li>
-<li><a href="#_terminology">Terminology</a></li>
-<li><a href="#_goals_requirements">Goals/Requirements</a></li>
-<li><a href="#_use_cases_questions">Use-cases/questions</a></li>
-<li><a href="#_an_awful_diagram">An awful diagram</a></li>
+<li><a href="#_basic_authentication_for_administrator">Basic Authentication for Administrator</a></li>
+<li><a href="#_ldap_authentication">LDAP Authentication</a></li>
+<li><a href="#_security">Security</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_basic_authentication_for_administrator"><a class="anchor" href="#_basic_authentication_for_administrator"></a>Basic Authentication for Administrator</h2>
 <div class="sectionbody">
-<div class="imageblock">
+<div class="ulist">
+<ul>
+<li>
+<p>Following configuration enables basic authentication for REST APIs available
+over the admin port.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">deploydb.launch.yml</div>
 <div class="content">
-<a class="image" href="https://gitter.im/lookout/deploydb"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join%20Chat"></a>
-</div>
-</div>
-<div class="paragraph">
-<p><span class="image"><a class="image" href="https://travis-ci.org/lookout/deploydb"><img src="https://travis-ci.org/lookout/deploydb.svg?branch=master" alt="Build Status"></a></span></p>
-</div>
-<div class="paragraph">
-<p><strong>Who, what, where and when.</strong></p>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_important_links"><a class="anchor" href="#_important_links"></a>Important Links</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/lookout/deploydb">Source code</a></p>
-</li>
-<li>
-<p><a href="https://github.com/lookout/deploydb/issues">Issue Tracker</a></p>
-</li>
-<li>
-<p><a href="https://bintray.com/lookout/systems/DeployDB/_latestVersion">Latest released version</a></p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_internals_hacking"><a class="anchor" href="#_internals_hacking"></a>Internals/Hacking</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="hacking.html">Hacking DeployDB</a></p>
-</li>
-<li>
-<p><a href="restapi/index.html">REST API documentation</a></p>
-</li>
-<li>
-<p><a href="groovydoc/index.html">Groovydocs</a></p>
-</li>
-<li>
-<p><a href="internals.html">Data model/Internals</a></p>
-</li>
-<li>
-<p><a href="config.html">Configuration</a></p>
-</li>
-<li>
-<p><a href="auth.html">Authentication</a></p>
-</li>
-<li>
-<p><a href="workflow.html">Workflow</a></p>
-</li>
-<li>
-<p><a href="webui.html">Web UI Design/concepts</a></p>
-</li>
-</ul>
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">http</span>:
+  <span class="key">adminUsername</span>: <span class="string"><span class="content">admin1234</span></span>
+  <span class="key">adminPassword</span>: <span class="string"><span class="content">password1234</span></span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_problem"><a class="anchor" href="#_the_problem"></a>The Problem</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As a service-oriented infrastructure grows, testing and managing/driving
-deployments with the oft used  "all together now" approach becomes untenable.</p>
-</div>
-<div class="paragraph">
-<p>Tracking versions of application and configuration management code through a
-consistent pipeline of tiered environments where verification of those changes
-can occur is difficult.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_the_solution"><a class="anchor" href="#_the_solution"></a>The Solution</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>DeployDB is a tool to provide a single source of truth for artifact-based
-deployments through multiple environments. It is intended to fit within an
-existing infrastructure where CI and deployment orchestration are already
-provided by other tools (e.g. Jenkins, Rundeck).</p>
-</div>
-<div class="paragraph">
-<p>As a user of DeployDB, you should be able to understand exactly:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>where a particular version of code has been deployed</p>
-</li>
-<li>
-<p>when that artifact was deployed and why</p>
-</li>
-<li>
-<p>what the verification status is of the artifact</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_terminology"><a class="anchor" href="#_terminology"></a>Terminology</h2>
+<h2 id="_ldap_authentication"><a class="anchor" href="#_ldap_authentication"></a>LDAP Authentication</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Artifact</strong>: a singular versioned file which represents an
-iteration of code to be deployed.</p>
+<p>LDAP Authentication can be enabled on REST APIs using following
+<a href="https://github.com/yammer/dropwizard-auth-ldap/blob/master/README.md#configuration">configuration</a></p>
 </li>
 <li>
-<p><strong>Deployment</strong>: taking an artifact, or artifacts, and
-delivering and executing them inside of an environment.</p>
-</li>
-<li>
-<p><strong>Environment</strong>: a collection of applications and configurations for executing
-services together across a cluster of machines.</p>
-</li>
-<li>
-<p><strong>Pipeline</strong>: a set of deployments and promotions defining the relationships
-between each environment</p>
-</li>
-<li>
-<p><strong>Promotion</strong>: a set of criteria for determining whether a deployment is
-suitable to progress to the next environment in the pipeline</p>
-</li>
-<li>
-<p><strong>Service</strong>: a collection of artifacts representing a conceptual service
-provided to customers (e.g. "the authentication service" which might consist
-of the "auth.war", "puppet-mysql", "puppet-jetty" artifacts)</p>
+<p>The cache-policy should be configured to improve application&#8217;s performance.</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_goals_requirements"><a class="anchor" href="#_goals_requirements"></a>Goals/Requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Provide a single source of truth for:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>which artifacts have been deployed to which environments</p>
-</li>
-<li>
-<p>the success of a deployment, between the act of deployment and the
-follow-on validation of the artifacts deployed</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Provide a centralized synchronization point for coordinating deployments
-across environments as defined by a pipeline.</p>
-</li>
-<li>
-<p><strong>Not</strong> provide redundant functionality already provided by orchestration
-tools such as Rundeck or Jenkins.</p>
-</li>
-<li>
-<p>Integrate with existing orchestration tools to drive deployments to
-a particular environment</p>
-</li>
-<li>
-<p>Integration points for external tools for:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>providing verification data around a specific deployment (e.g.
-"Deployment X was verified by Jenkins job &lt;jobname~ build =5")</p>
-</li>
-<li>
-<p>providing deployment start/finish information for environments</p>
-</li>
-<li>
-<p>providing read access to deployment, artifact and environment information
-contained with DeployDB</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Integration points should be exposed via a command line, Ops-friendly,
-interface</p>
-</li>
-<li>
-<p>Configuration should not live in the data store and be easily driven by
-configuration management tools (e.g. Chef, Puppet)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_use_cases_questions"><a class="anchor" href="#_use_cases_questions"></a>Use-cases/questions</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>How do we set up a new application/service in DeployDB?</p>
-</li>
-<li>
-<p>How does promotion of one application through an environment work so that
-the entire environment doesn&#8217;t have to be promoted together</p>
-</li>
-<li>
-<p>Deployment failures should have one of three outcomes:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Deploy the last known good Deployment to the environment</p>
-</li>
-<li>
-<p>Hit these webhooks (e.g. pagerduty)</p>
-</li>
-<li>
-<p>Do nothing/record and ignore it</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_an_awful_diagram"><a class="anchor" href="#_an_awful_diagram"></a>An awful diagram</h2>
-<div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
+<div class="title">deploydb.launch.yml</div>
 <div class="content">
-<pre>                                    2) publish
-                        +----------+   artifact +----------+
-      +---------------&gt; | TravisCI +------------+  Bintray |
-      |                 +----+-----+            +-----+----+
-      |                      |                        |
-      | 1) webhook           |                        |    3) webhook
-      |  (run tests)         |                        | (artifact available)
-      |                      |                        |
-      |                      |                        |
-+-----+----+                 |                 +------+------+                +----------+
-|  GitHub  |                 +---------------&gt; |  #DeployDB  +--------------&gt; |  Heroku  |
-+----------+                                   +-------------+                +----------+
-               5) report deploy/verification                4) webhook
-                   success                                 (deploy artifact
-                                                            to environment)</pre>
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">ldap</span>:
+  <span class="key">uri</span>: <span class="string"><span class="content">ldaps://myldap.com:636</span></span>
+  <span class="comment"># Cache 10000 credentials for at least 10 minutes</span>
+  <span class="key">cachePolicy</span>: <span class="string"><span class="content">maximumSize=10000, expireAfterWrite=10m</span></span>
+  <span class="key">userFilter</span>: <span class="string"><span class="content">ou=people,dc=yourcompany,dc=com</span></span>
+  <span class="key">groupFilter</span>: <span class="string"><span class="content">ou=groups,dc=yourcompany,dc=com</span></span>
+  <span class="key">userNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
+  <span class="key">groupNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
+  <span class="key">groupMembershipAttribute</span>: <span class="string"><span class="content">memberUid</span></span>
+  <span class="key">groupClassName</span>: <span class="string"><span class="content">posixGroup</span></span>
+  <span class="comment"># Restrict groups to the following</span>
+  <span class="key">restrictToGroups</span>:
+    - <span class="string"><span class="content">user</span></span>
+    - <span class="string"><span class="content">admin</span></span>
+    - <span class="string"><span class="content">bots</span></span>
+  <span class="key">connectTimeout</span>: <span class="string"><span class="content">500ms</span></span>
+  <span class="key">readTimeout</span>: <span class="string"><span class="content">500ms</span></span></code></pre>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_security"><a class="anchor" href="#_security"></a>Security</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="http://www.dropwizard.io/manual/configuration.html#https">https</a> can be enabled
+in the launch config for end-to-end security</p>
+</li>
+<li>
+<p>All of the REST APIs are available over HTTPS.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-04-08 10:52:31 EDT
+Last updated 2015-04-10 09:03:44 EDT
 </div>
 </div>
 </body>

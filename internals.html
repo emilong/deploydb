@@ -815,20 +815,6 @@ Artifacts which should trigger Deployments for the given Services..</p>
 </div>
 <div class="sect2">
 <h3 id="_promotions"><a class="anchor" href="#_promotions"></a>Promotions</h3>
-<div class="listingblock">
-<div class="title">promotions/jenkins-smoke.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">JenkinsPromotion</span></span>
-<span class="key">jobs</span>:
-  - <span class="string"><span class="content">basic-smokes-test</span></span>
-  - <span class="string"><span class="content">basic-perf-test</span></span>
-  - <span class="string"><span class="content">end2end-smoke-test</span></span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>JenkinsPromotion</code> as a typed concept would require a list of Jenkins job names
-that would be required to succeed in order to execute the promotion.</p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -844,6 +830,20 @@ work.
 </table>
 </div>
 <div class="listingblock">
+<div class="title">promotions/jenkins-smoke.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">JenkinsPromotion</span></span>
+<span class="key">jobs</span>:
+  - <span class="string"><span class="content">basic-smokes-test</span></span>
+  - <span class="string"><span class="content">basic-perf-test</span></span>
+  - <span class="string"><span class="content">end2end-smoke-test</span></span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>JenkinsPromotion</code> as a typed concept would require a list of Jenkins job names
+that would be required to succeed in order to execute the promotion.</p>
+</div>
+<div class="listingblock">
 <div class="title">promotions/status-check.yml</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">WebhookPromotion</span></span>
@@ -857,9 +857,21 @@ work.
 application and see if it&#8217;s online before identifying it as "promoted." How
 this might work with a cluster of applications in one service, I&#8217;m not yet sure.</p>
 </div>
+<div class="listingblock">
+<div class="title">promotions/manual-validate.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">ManualPromotion</span></span>
+<span class="key">approverGroupName</span>: <span class="string"><span class="content">SuperImpGroup</span></span></code></pre>
+</div>
+</div>
 <div class="paragraph">
-<p>`A <strong>manual</strong> promotion is a special case scenario where the UI for DeployDB is
-going to need to present a button to a user to click</p>
+<p><code>ManualPromotion</code> is a special case scenario where the UI for DeployDB is
+going to present a button to a user to click.</p>
+</div>
+<div class="paragraph">
+<p>If approverGroupName is configured and <a href="auth.html#LDAP Authentication">LDAP authentication</a>
+is enabled, then the user of REST API will be authenticated against that group name. If LDAP
+authentication is NOT enabled, then the approverGroupName is ignored.</p>
 </div>
 </div>
 <div class="sect2">
@@ -923,7 +935,7 @@ ns = notStarted</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-02-19 09:11:26 EST
+Last updated 2015-04-10 08:47:15 EDT
 </div>
 </div>
 </body>
