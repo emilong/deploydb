@@ -522,9 +522,9 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_pipelines">Pipelines</a></li>
 <li><a href="#_services">Services</a></li>
 <li><a href="#_promotions">Promotions</a></li>
-<li><a href="#_flow_diagram">Flow Diagram</a></li>
 </ul>
 </li>
+<li><a href="#_test">Test</a></li>
 </ul>
 </div>
 </div>
@@ -896,11 +896,7 @@ The yaml for such promotion may look as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy"><span class="type">class</span> <span class="class">BasicPromotionImpl</span> <span class="directive">extends</span> <span class="type">class</span> <span class="class">PromotionImpl</span> {
-    <span class="type">boolean</span> validateCredentials(User user, <span class="predefined-type">Map</span> attributes) { <span class="predefined-constant">true</span> }
-    <span class="type">boolean</span> onStarted(<span class="predefined-type">Map</span> attributes) { <span class="predefined-constant">true</span> }
-    <span class="type">boolean</span> onCompleted(<span class="predefined-type">Map</span> attributes) { <span class="predefined-constant">true</span> }
-}</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">src/main/groovy/deploydb/models/Promotion/PromotionImpl.groovy<span class="type">[]</span></code></pre>
 </div>
 </div>
 </div>
@@ -932,154 +928,78 @@ the Promotion approval.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy"><span class="type">class</span> <span class="class">ManualPromotionImpl</span> <span class="directive">extends</span> <span class="type">class</span> <span class="class">PromotionImpl</span> {
-    <span class="comment">/* invoked on REST API */</span>
-    <span class="type">boolean</span> validate(User user, <span class="predefined-type">Map</span> attributes) {
-       <span class="comment">/* Validate that User is part of &quot;allowedGroup&quot; */</span>
+<pre class="CodeRay highlight"><code data-lang="groovy">src/main/groovy/deploydb/models/Promotion/ManualPromotionImpl.groovy<span class="type">[]</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_test"><a class="anchor" href="#_test"></a>Test</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>class ManualPromotionImpl extends class PromotionImpl {
+    /* invoked on REST API <strong>/
+    boolean validate(User user, Map attributes) {
+       /</strong> Validate that User is part of "allowedGroup" <strong>/
     }
-    <span class="comment">/* invoked on Status transition to STARTED */</span>
-    <span class="type">boolean</span> onStarted() { <span class="predefined-constant">true</span> }
-    <span class="comment">/* invoked on Status transition to COMPLETED */</span>
-    <span class="type">boolean</span> onCompleted() {  <span class="predefined-constant">true</span> }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_webhook_promotion"><a class="anchor" href="#_webhook_promotion"></a>Webhook Promotion</h4>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-work-in-progress
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><code>Webhook Promotion</code> is an example of self-sufficient Promotion that would make a
-HTTP GET request to the application and see if it&#8217;s online before identifying
-it as "promoted." The yaml for such promotion may look as follows:</p>
-</div>
-<div class="listingblock">
-<div class="title">promotions/status-check.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">deploydb.models.Promotion.WebhookPromotionImpl</span></span>
-<span class="key">description</span>: <span class="string"><span class="content">Example of Webhook Promotion</span></span>
-<span class="key">attributes</span>:
-    <span class="key">url</span>: <span class="string"><span class="content">/healhcheck</span></span>
-    <span class="key">status</span>: <span class="string"><span class="content">200</span></span>
-    <span class="key">timeout</span>: <span class="string"><span class="content">15</span></span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The corresponding implementation can be defined as follows:</p>
+    /</strong> invoked on Status transition to STARTED <strong>/
+    boolean onStarted() { true }
+    /</strong> invoked on Status transition to COMPLETED */
+    boolean onCompleted() {  true }
+}</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy"><span class="type">class</span> <span class="class">WebhookPromotionImpl</span> <span class="directive">extends</span> <span class="type">class</span> <span class="class">PromotionImpl</span> {
-    <span class="comment">/* invoked on REST API */</span>
-    <span class="type">boolean</span> validateCredentials(User user, <span class="predefined-type">Map</span> attributes) { <span class="predefined-constant">true</span> }
-    <span class="comment">/* invoked on Status transition to STARTED */</span>
-    <span class="type">boolean</span> onStarted(<span class="predefined-type">Map</span> attributes) {
-        <span class="comment">/* do a GET on url specified in the attributes */</span>
-        <span class="comment">/* queue a HookRequest to self with the response from GET */</span>
-    }
-    <span class="comment">/* invoked on Status transition to COMPLETED */</span>
-    <span class="type">boolean</span> onCompleted() {  <span class="predefined-constant">true</span> }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_jenkins_promotion"><a class="anchor" href="#_jenkins_promotion"></a>Jenkins Promotion</h4>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-work-in-progress
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><code>Jenkins Promotion</code> as a typed concept would require a list of Jenkins job names
-that would be required to succeed in order to execute the promotion.</p>
-</div>
-<div class="listingblock">
-<div class="title">promotions/jenkins-smoke.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">deploydb.models.Promotion.JenkinsPromotionImpl</span></span>
-<span class="key">description</span>: <span class="string"><span class="content">Jenkins smoke</span></span>
-<span class="key">attributes</span>:
-    <span class="key">jobs</span> :
-        - <span class="string"><span class="content">basic-smokes-test</span></span>
-        - <span class="string"><span class="content">basic-perf-test</span></span>
-        - <span class="string"><span class="content">end2end-smoke-test</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_flow_diagram"><a class="anchor" href="#_flow_diagram"></a>Flow Diagram</h3>
-<div class="literalblock">
-<div class="content">
-<pre>initiator        deployDb            deployer1        deployer2       tester
-   +                 +                   +               +               +
-   |   A1' created   |                   |               |               |
-   +-----------------&gt;                   |               |               |
-   | create artifact | D1=ns, A1',S1,E1  |               |               |
-   |                 +-------------------&gt;               |               |
-   |                 | Deployment Start  |               |               |
-   |                 |                   |               |               |
-   |                 |    D1=started     |               |               |
-   |                 &lt;-------------------+               |               |
-   |                 | Deployment Startd |               |               |
-   |                 |                   |               |               |
-   |                 |    D1=compltd     |               |               |
-   |                 &lt;-------------------+               |               |
-   |                 | Deployment Compltd|               |               |
-   |                 |                   +               +               |
-   |                 |   D1, A1',S1,S1  (Deployment Completed)           |
-   |                 +-------------------+---------------+---------------&gt;
-   |                 |                   |               |               |
-   |                 |   D1, P1-PASSED   |               |               |
-   |                 &lt;---------+-----------------------------------------+
-   |                 |                   |               |               |
-   |                 | D2=ns, A1',S1,E2  |               |               |
-   |                 +-----------------------------------&gt;               |
-   |                 | Deployment Start  |               |               |
-   |                 |                   |               |               |
-   |                 |    D2=started     |               |               |
-   |                 &lt;-----------------------------------+               |
-   |                 | Deployment Startd |               |               |
-   |                 |                   |               |               |
-   |                 |    D2=compltd     |               |               |
-   |                 &lt;-----------------------------------+               |
-   |                 | Deployment Compltd|               |               |
-   |                 |                   +               +               |
-   |                 |   D2, A1',S1,E2  (Deployment Completed)           |
-   |                 +-------------------+---------------+---------------&gt;
-   |                 |                   |               |               |
-   |                 |   D2, P1-PASSED   |               |               |
-   |                 &lt;---------+-----------------------------------------+
-   |                 |                   |               |               |
-   +                 +                   +               +               +</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Legend:
-Service S1 = Artifacts (A1, A2),Pipline (PL1), Promotions (P1)
-Pipline PL1 = Enviroment (E1), Enviroment (E2)
-ns = notStarted</pre>
-</div>
+<pre>=== Flow Diagram
+
+  initiator        deployDb            deployer1        deployer2       tester
+     +                 +                   +               +               +
+     |   A1' created   |                   |               |               |
+     +-----------------&gt;                   |               |               |
+     | create artifact | D1=ns, A1',S1,E1  |               |               |
+     |                 +-------------------&gt;               |               |
+     |                 | Deployment Start  |               |               |
+     |                 |                   |               |               |
+     |                 |    D1=started     |               |               |
+     |                 &lt;-------------------+               |               |
+     |                 | Deployment Startd |               |               |
+     |                 |                   |               |               |
+     |                 |    D1=compltd     |               |               |
+     |                 &lt;-------------------+               |               |
+     |                 | Deployment Compltd|               |               |
+     |                 |                   +               +               |
+     |                 |   D1, A1',S1,S1  (Deployment Completed)           |
+     |                 +-------------------+---------------+---------------&gt;
+     |                 |                   |               |               |
+     |                 |   D1, P1-PASSED   |               |               |
+     |                 &lt;---------+-----------------------------------------+
+     |                 |                   |               |               |
+     |                 | D2=ns, A1',S1,E2  |               |               |
+     |                 +-----------------------------------&gt;               |
+     |                 | Deployment Start  |               |               |
+     |                 |                   |               |               |
+     |                 |    D2=started     |               |               |
+     |                 &lt;-----------------------------------+               |
+     |                 | Deployment Startd |               |               |
+     |                 |                   |               |               |
+     |                 |    D2=compltd     |               |               |
+     |                 &lt;-----------------------------------+               |
+     |                 | Deployment Compltd|               |               |
+     |                 |                   +               +               |
+     |                 |   D2, A1',S1,E2  (Deployment Completed)           |
+     |                 +-------------------+---------------+---------------&gt;
+     |                 |                   |               |               |
+     |                 |   D2, P1-PASSED   |               |               |
+     |                 &lt;---------+-----------------------------------------+
+     |                 |                   |               |               |
+     +                 +                   +               +               +
+
+     Legend:
+     Service S1 = Artifacts (A1, A2),Pipline (PL1), Promotions (P1)
+     Pipline PL1 = Enviroment (E1), Enviroment (E2)
+     ns = notStarted</pre>
 </div>
 </div>
 </div>
@@ -1087,7 +1007,7 @@ ns = notStarted</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-04-17 14:05:14 EDT
+Last updated 2015-04-20 10:00:44 EDT
 </div>
 </div>
 </body>
