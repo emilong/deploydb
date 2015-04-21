@@ -522,9 +522,9 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_pipelines">Pipelines</a></li>
 <li><a href="#_services">Services</a></li>
 <li><a href="#_promotions">Promotions</a></li>
+<li><a href="#_flow_diagram">Flow Diagram</a></li>
 </ul>
 </li>
-<li><a href="#_test">Test</a></li>
 </ul>
 </div>
 </div>
@@ -867,14 +867,7 @@ promotion specific methods. The Interface looks as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Interface PromotionImpl {
-    <span class="comment">/* invoked on REST API */</span>
-    <span class="type">boolean</span> validate(User user, <span class="predefined-type">Map</span> attributes)
-    <span class="comment">/* invoked on Status transition to STARTED */</span>
-    <span class="type">boolean</span> onStarted(<span class="predefined-type">Map</span> attributes)
-    <span class="comment">/* invoked on Status transition to COMPLETED */</span>
-    <span class="type">boolean</span> onCompleted()
-}</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">TBD(issue <span class="error">#</span><span class="integer">162</span>) <span class="key">include</span>::{sourcedir}/Promotion/PromotionImpl.groovy[lines=<span class="integer">5</span>..<span class="integer">7</span>]</code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -896,7 +889,7 @@ The yaml for such promotion may look as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">src/main/groovy/deploydb/models/Promotion/PromotionImpl.groovy<span class="type">[]</span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">TBD(issue <span class="error">#</span><span class="integer">162</span>) <span class="key">include</span>::{sourcedir}/Promotion/BasicPromotionImpl.groovy[lines=<span class="integer">6</span>..<span class="integer">11</span>]</code></pre>
 </div>
 </div>
 </div>
@@ -928,78 +921,65 @@ the Promotion approval.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">src/main/groovy/deploydb/models/Promotion/ManualPromotionImpl.groovy<span class="type">[]</span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">TBD(issue <span class="error">#</span><span class="integer">162</span>) - <span class="key">include</span>::{sourcedir}/Promotion/ManualLDAPPromotionImpl.groovy[lines=<span class="integer">6</span>..<span class="integer">17</span>]</code></pre>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_test"><a class="anchor" href="#_test"></a>Test</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>class ManualPromotionImpl extends class PromotionImpl {
-    /* invoked on REST API <strong>/
-    boolean validate(User user, Map attributes) {
-       /</strong> Validate that User is part of "allowedGroup" <strong>/
-    }
-    /</strong> invoked on Status transition to STARTED <strong>/
-    boolean onStarted() { true }
-    /</strong> invoked on Status transition to COMPLETED */
-    boolean onCompleted() {  true }
-}</p>
-</div>
-<div class="listingblock">
+<div class="sect2">
+<h3 id="_flow_diagram"><a class="anchor" href="#_flow_diagram"></a>Flow Diagram</h3>
+<div class="literalblock">
 <div class="content">
-<pre>=== Flow Diagram
-
-  initiator        deployDb            deployer1        deployer2       tester
-     +                 +                   +               +               +
-     |   A1' created   |                   |               |               |
-     +-----------------&gt;                   |               |               |
-     | create artifact | D1=ns, A1',S1,E1  |               |               |
-     |                 +-------------------&gt;               |               |
-     |                 | Deployment Start  |               |               |
-     |                 |                   |               |               |
-     |                 |    D1=started     |               |               |
-     |                 &lt;-------------------+               |               |
-     |                 | Deployment Startd |               |               |
-     |                 |                   |               |               |
-     |                 |    D1=compltd     |               |               |
-     |                 &lt;-------------------+               |               |
-     |                 | Deployment Compltd|               |               |
-     |                 |                   +               +               |
-     |                 |   D1, A1',S1,S1  (Deployment Completed)           |
-     |                 +-------------------+---------------+---------------&gt;
-     |                 |                   |               |               |
-     |                 |   D1, P1-PASSED   |               |               |
-     |                 &lt;---------+-----------------------------------------+
-     |                 |                   |               |               |
-     |                 | D2=ns, A1',S1,E2  |               |               |
-     |                 +-----------------------------------&gt;               |
-     |                 | Deployment Start  |               |               |
-     |                 |                   |               |               |
-     |                 |    D2=started     |               |               |
-     |                 &lt;-----------------------------------+               |
-     |                 | Deployment Startd |               |               |
-     |                 |                   |               |               |
-     |                 |    D2=compltd     |               |               |
-     |                 &lt;-----------------------------------+               |
-     |                 | Deployment Compltd|               |               |
-     |                 |                   +               +               |
-     |                 |   D2, A1',S1,E2  (Deployment Completed)           |
-     |                 +-------------------+---------------+---------------&gt;
-     |                 |                   |               |               |
-     |                 |   D2, P1-PASSED   |               |               |
-     |                 &lt;---------+-----------------------------------------+
-     |                 |                   |               |               |
-     +                 +                   +               +               +
-
-     Legend:
-     Service S1 = Artifacts (A1, A2),Pipline (PL1), Promotions (P1)
-     Pipline PL1 = Enviroment (E1), Enviroment (E2)
-     ns = notStarted</pre>
+<pre>initiator        deployDb            deployer1        deployer2       tester
+   +                 +                   +               +               +
+   |   A1' created   |                   |               |               |
+   +-----------------&gt;                   |               |               |
+   | create artifact | D1=ns, A1',S1,E1  |               |               |
+   |                 +-------------------&gt;               |               |
+   |                 | Deployment Start  |               |               |
+   |                 |                   |               |               |
+   |                 |    D1=started     |               |               |
+   |                 &lt;-------------------+               |               |
+   |                 | Deployment Startd |               |               |
+   |                 |                   |               |               |
+   |                 |    D1=compltd     |               |               |
+   |                 &lt;-------------------+               |               |
+   |                 | Deployment Compltd|               |               |
+   |                 |                   +               +               |
+   |                 |   D1, A1',S1,S1  (Deployment Completed)           |
+   |                 +-------------------+---------------+---------------&gt;
+   |                 |                   |               |               |
+   |                 |   D1, P1-PASSED   |               |               |
+   |                 &lt;---------+-----------------------------------------+
+   |                 |                   |               |               |
+   |                 | D2=ns, A1',S1,E2  |               |               |
+   |                 +-----------------------------------&gt;               |
+   |                 | Deployment Start  |               |               |
+   |                 |                   |               |               |
+   |                 |    D2=started     |               |               |
+   |                 &lt;-----------------------------------+               |
+   |                 | Deployment Startd |               |               |
+   |                 |                   |               |               |
+   |                 |    D2=compltd     |               |               |
+   |                 &lt;-----------------------------------+               |
+   |                 | Deployment Compltd|               |               |
+   |                 |                   +               +               |
+   |                 |   D2, A1',S1,E2  (Deployment Completed)           |
+   |                 +-------------------+---------------+---------------&gt;
+   |                 |                   |               |               |
+   |                 |   D2, P1-PASSED   |               |               |
+   |                 &lt;---------+-----------------------------------------+
+   |                 |                   |               |               |
+   +                 +                   +               +               +</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Legend:
+Service S1 = Artifacts (A1, A2),Pipline (PL1), Promotions (P1)
+Pipline PL1 = Enviroment (E1), Enviroment (E2)
+ns = notStarted</pre>
+</div>
 </div>
 </div>
 </div>
@@ -1007,7 +987,7 @@ the Promotion approval.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-04-20 10:00:44 EDT
+Last updated 2015-04-21 14:19:16 EDT
 </div>
 </div>
 </body>
