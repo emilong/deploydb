@@ -516,7 +516,7 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#_queueing">Queueing</a></li>
 <li><a href="#_data_storage">Data storage</a></li>
-<li><a href="#_environments_pipelines_promotions">Environments/Pipelines/Promotions</a>
+<li><a href="#_models">Models</a>
 <ul class="sectlevel2">
 <li><a href="#_environments">Environments</a></li>
 <li><a href="#_pipelines">Pipelines</a></li>
@@ -662,7 +662,7 @@ information into a database. This should be abstracted through a JDBC connector.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_environments_pipelines_promotions"><a class="anchor" href="#_environments_pipelines_promotions"></a>Environments/Pipelines/Promotions</h2>
+<h2 id="_models"><a class="anchor" href="#_models"></a>Models</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Current thinking: if pipelines are defined in "configuration" as are
@@ -797,6 +797,18 @@ version to successfully complete pipeline)</p></td>
 </table>
 <div class="sect3">
 <h4 id="_service_defaults"><a class="anchor" href="#_service_defaults"></a>Service Defaults</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+work-in-progress
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>DeployDB should support a special file called <code>_defaults.yml</code> which can contain
 default Artifacts which can be considered part of every Service.  This might
@@ -829,49 +841,107 @@ work.
 </tr>
 </table>
 </div>
-<div class="listingblock">
-<div class="title">promotions/jenkins-smoke.yml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">JenkinsPromotion</span></span>
-<span class="key">jobs</span>:
-  - <span class="string"><span class="content">basic-smokes-test</span></span>
-  - <span class="string"><span class="content">basic-perf-test</span></span>
-  - <span class="string"><span class="content">end2end-smoke-test</span></span></code></pre>
-</div>
+<div class="paragraph">
+<p>The DeployDB makes it possible to define variety of Promotions. From a passive
+Promotion that simply records the data, to a self-sufficient Promotion that takes
+care of simple tasks and automate the transitions.</p>
 </div>
 <div class="paragraph">
-<p><code>JenkinsPromotion</code> as a typed concept would require a list of Jenkins job names
-that would be required to succeed in order to execute the promotion.</p>
+<p>Promotion can be customized with attributes and methods. The attributes
+are passed to methods that are called on certain events or transitions.
+The generic yaml config looks as follows:</p>
 </div>
 <div class="listingblock">
-<div class="title">promotions/status-check.yml</div>
+<div class="title">promotions/any-smoke.yml</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">WebhookPromotion</span></span>
-<span class="key">url</span>: <span class="string"><span class="content">/healhcheck</span></span>
-<span class="key">status</span>: <span class="string"><span class="content">200</span></span>
-<span class="key">timeout</span>: <span class="string"><span class="content">15</span></span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">&lt;full class name of derived Impl class&gt;</span></span>
+<span class="key">description</span>: <span class="string"><span class="content">information about this promotion</span></span>
+<span class="key">attributes</span>:
+   <span class="key">attr1</span> : <span class="string"><span class="content">specific to this promotion</span></span>
+   <span class="key">attr1</span> : <span class="string"><span class="content">specific to this promotion</span></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><code>WebhookPromotion</code> would be something that would make a HTTP GET request to the
-application and see if it&#8217;s online before identifying it as "promoted." How
-this might work with a cluster of applications in one service, I&#8217;m not yet sure.</p>
+<p>Promotion offers a PromotionImpl Interface that can be extended to define
+promotion specific methods. The Interface looks as follows:</p>
 </div>
 <div class="listingblock">
-<div class="title">promotions/manual-validate.yml</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">ManualPromotion</span></span>
-<span class="key">approverGroupName</span>: <span class="string"><span class="content">SuperImpGroup</span></span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy"><span class="type">interface</span> PromotionImpl {
+    <span class="type">boolean</span> validate(User user, <span class="predefined-type">Map</span>&lt;<span class="predefined-type">String</span>, <span class="predefined-type">Object</span>&gt; attributes)
+}</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_basic_promotion"><a class="anchor" href="#_basic_promotion"></a>Basic Promotion</h4>
+<div class="paragraph">
+<p><code>Basic Promotion</code> is very passive form of promotion, which is mainly used for
+record keeping. All of the Status transitions are driven by external triggers.
+The yaml for such promotion may look as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">promotions/basic_smoke.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">deploydb.models.Promotion.BasicPromotionImpl</span></span>
+<span class="key">description</span>: <span class="string"><span class="content">Example of Basic Promotion</span></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><code>ManualPromotion</code> is a special case scenario where the UI for DeployDB is
-going to present a button to a user to click.</p>
+<p>The corresponding implementation is defined as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy"><span class="type">class</span> <span class="class">BasicPromotionImpl</span> <span class="directive">implements</span> PromotionImpl {
+    BasicPromotionImpl() { }
+
+    <span class="comment">/** No validation required for basic */</span>
+    <span class="type">boolean</span> validate(User user, <span class="predefined-type">Map</span>&lt;<span class="predefined-type">String</span>, <span class="predefined-type">Object</span>&gt; attributes) { <span class="predefined-constant">true</span> }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_manual_promotion"><a class="anchor" href="#_manual_promotion"></a>Manual Promotion</h4>
+<div class="paragraph">
+<p><code>Manual Promotion</code> is a special case scenario where the UI for DeployDB is
+going to present a button to a user to click and approve the
+promotion. Such an approval can be protected by using LDAP authentication
+and authorization. The yaml config for such promotion may look as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">promotions/storm-manual-validate.yml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">type</span>: <span class="string"><span class="content">deploydb.models.Promotion.ManualPromotionImpl</span></span>
+<span class="key">description</span>: <span class="string"><span class="content">Manual Promotion for Storm</span></span>
+<span class="key">attributes</span>:
+    <span class="key">allowedGroup</span>: <span class="string"><span class="content">InfrastructureGroup</span></span></code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>If approverGroupName is configured and <a href="auth.html#LDAP Authentication">LDAP authentication</a>
-is enabled, then the user of REST API will be authenticated against that group name. If LDAP
-authentication is NOT enabled, then the approverGroupName is ignored.</p>
+<p>If allowedGroup is configured and <a href="auth.html#LDAP Authentication">LDAP authentication</a>
+is enabled, then it is ensured that user is part of the configured group. If allowedGroup
+is NOT configured, then authorization is skipped. In all other cases, user is denied
+the Promotion approval.</p>
+</div>
+<div class="paragraph">
+<p>The ManualPromotionImpl is defined as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy"><span class="type">class</span> <span class="class">ManualLDAPPromotionImpl</span> <span class="directive">implements</span> PromotionImpl {
+
+    <span class="type">boolean</span> validate(User user, <span class="predefined-type">Map</span>&lt;<span class="predefined-type">String</span>, <span class="predefined-type">Object</span>&gt; attributes) {
+        <span class="comment">/**
+         * Validation succeeds if:
+         * - &quot;allowedGroup&quot; is configured and user belongs to the group
+         * Validation fails in all the remaining cases
+         */</span>
+        <span class="keyword">return</span> attributes &amp;&amp; attributes[<span class="string"><span class="delimiter">&quot;</span><span class="content">allowedGroup</span><span class="delimiter">&quot;</span></span>] &amp;&amp;
+                user &amp;&amp; user.groups.contains(attributes[<span class="string"><span class="delimiter">&quot;</span><span class="content">allowedGroup</span><span class="delimiter">&quot;</span></span>])
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -935,7 +1005,7 @@ ns = notStarted</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-04-10 08:47:15 EDT
+Last updated 2015-04-21 13:46:23 EDT
 </div>
 </div>
 </body>
