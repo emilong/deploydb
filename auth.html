@@ -556,14 +556,18 @@ over the admin port.</p>
   <span class="key">uri</span>: <span class="string"><span class="content">ldap://server.example.com:10389</span></span>
   <span class="comment"># Cache 10000 credentials for at least 10 minutes</span>
   <span class="key">cachePolicy</span>: <span class="string"><span class="content">maximumSize=10000, expireAfterWrite=10m</span></span>
-  <span class="key">userFilter</span>: <span class="string"><span class="content">ou=people,dc=yourcompany,dc=com</span></span>
-  <span class="key">groupFilter</span>: <span class="string"><span class="content">ou=groups,dc=yourcompany,dc=com</span></span>
-  <span class="key">userNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
-  <span class="key">groupNameAttribute</span>: <span class="string"><span class="content">cn</span></span>
+  <span class="key">baseDC</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">dc=example,dc=com</span><span class="delimiter">&quot;</span></span>
+  <span class="key">bindDN</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">cn=admin</span><span class="delimiter">&quot;</span></span>
+  <span class="key">bindPassword</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">secret</span><span class="delimiter">&quot;</span></span>
+  <span class="key">userNamePrefix</span>: <span class="string"><span class="content">cn</span></span>
+  <span class="comment"># Filter groups by ObjectClass associated with user</span>
+  <span class="key">userObjectClass</span>: <span class="string"><span class="content">posixUser</span></span>
+  <span class="key">groupNamePrefix</span>: <span class="string"><span class="content">cn</span></span>
   <span class="comment"># Attribute that defines the association</span>
-  <span class="key">groupMembershipAttribute</span>: <span class="string"><span class="content">memberUid</span></span>
+  <span class="key">groupMembershipPrefix</span>: <span class="string"><span class="content">memberUid</span></span>
   <span class="comment"># Filter groups by ObjectClass associated with group</span>
-  <span class="key">groupClassName</span>: <span class="string"><span class="content">posixGroup</span></span>
+  <span class="key">groupObjectClass</span>: <span class="string"><span class="content">posixGroup</span></span>
+  <span class="key">distinguishedNamePrefix</span>: <span class="string"><span class="content">dn</span></span>
   <span class="key">connectTimeout</span>: <span class="string"><span class="content">500ms</span></span>
   <span class="key">readTimeout</span>: <span class="string"><span class="content">500ms</span></span></code></pre>
 </div>
@@ -589,7 +593,7 @@ in the launch config for end-to-end security</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-04-15 09:21:30 EDT
+Last updated 2015-05-02 07:52:30 PDT
 </div>
 </div>
 </body>
