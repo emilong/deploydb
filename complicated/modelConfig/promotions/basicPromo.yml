@@ -1,0 +1,2 @@
+type:  deploydb.models.promotion.BasicPromotionImpl
+description: "Basic Smoke test for the Basic Service"

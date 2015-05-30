@@ -1,0 +1,22 @@
+database:
+  driverClass: org.h2.Driver
+  user: nobody
+  url: "jdbc:h2:./deployDB.complicated.db"
+
+# DeployDB base configuration directory (cannonical path)
+# YAML configuration files for models - services, environments, pipelines,
+# webhooks and promotions - should be stored in respective sub-directories
+configDirectory: complicated/modelConfig
+
+whoas:
+  queue:
+    type: "com.github.lookout.whoas.InMemoryQueue"
+    key: "queue"
+    hostname: "localhost"
+    port: 6379
+  runnerType: "com.github.lookout.whoas.SequentialHookRunner"
+
+logging:
+  level: INFO
+  loggers:
+    org.hibernate.SQL: ALL

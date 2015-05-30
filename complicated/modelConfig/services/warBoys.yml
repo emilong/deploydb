@@ -1,0 +1,10 @@
+description: "War boys"
+artifacts:
+  - immortan.joe:mask
+  - nux:chrome
+  - shiny.shiny:shiny
+pipelines:
+  - productionPipe
+promotions:
+  - chromeSpray
+  - smoke

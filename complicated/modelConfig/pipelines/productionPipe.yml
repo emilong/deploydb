@@ -1,0 +1,11 @@
+description: "Full Prod"
+environments:
+  devAlpha:
+  devBeta:
+  integration:
+  preprod:
+    promotions:
+      - acceptance
+      - manual
+      - load
+  production:
